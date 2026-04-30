@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "pm-copilot",
-      "source": ".",
+      "source": "./",
       "description": "The AI-native PM operating system — deep, framework-grounded PM skills with live MCP tool integrations, chained sub-agent workflows, and persistent user memory.",
       "version": "2.1.0",
       "author": {
