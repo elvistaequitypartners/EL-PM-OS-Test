@@ -1,0 +1,19 @@
+{
+  "name": "pm-copilot",
+  "owner": {
+    "name": "Product Faculty"
+  },
+  "plugins": [
+    {
+      "name": "pm-copilot",
+      "source": ".",
+      "description": "The AI-native PM operating system — deep, framework-grounded PM skills with live MCP tool integrations, chained sub-agent workflows, and persistent user memory.",
+      "version": "2.1.0",
+      "author": {
+        "name": "Product Faculty"
+      },
+      "category": "productivity",
+      "license": "Apache-2.0"
+    }
+  ]
+}
