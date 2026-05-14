@@ -1,4 +1,4 @@
-# PM Copilot — The AI-Native PM Operating System
+# The AI-Native PM Operating System
 
 ### Plugin for Claude Code, Claude Cowork, Claude Desktop, and Claude.AI Web || Product Faculty
 
