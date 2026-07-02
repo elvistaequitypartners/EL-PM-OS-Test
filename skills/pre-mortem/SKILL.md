@@ -14,7 +14,7 @@ Key principle from Doshi: "Most execution problems are really strategy problems.
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the initiative being analyzed (from roadmap state or open questions). Read `context/product/roadmap.md` for timelines and dependencies.
+Read `memory/personal/${USER}.md` for the initiative being analyzed (from roadmap state or open questions). Read `context/product/roadmap.md` for timelines and dependencies.
 
 ## Step 2 — Establish the Scenario
 
@@ -88,4 +88,4 @@ Produce:
 - Detailed mitigation for top 3 failures (prevention + detection + response)
 - The single question that would most change the team's plan if answered
 
-Offer to save top risks to `memory/user-profile.md` as tracked risks.
+Offer to save top risks to `memory/personal/${USER}.md` as tracked risks.

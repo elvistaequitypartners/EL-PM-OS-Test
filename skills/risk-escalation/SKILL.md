@@ -14,7 +14,7 @@ Key principle: Never escalate a problem without a recommendation. Leadership tru
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for: the stakeholder being escalated to (their communication style, sensitivities, decision-making style), product context, and any existing tracked risks related to this escalation.
+Read `memory/personal/${USER}.md` for: the stakeholder being escalated to (their communication style, sensitivities, decision-making style), product context, and any existing tracked risks related to this escalation.
 
 ## Step 2 — Escalation Diagnosis
 
@@ -76,4 +76,4 @@ From memory, apply the stakeholder's known preferences:
 Produce:
 - The escalation message in the appropriate format
 - Options table (for medium/high urgency)
-- A suggested update to add this risk to `memory/user-profile.md` as a tracked risk
+- A suggested update to add this risk to `memory/personal/${USER}.md` as a tracked risk

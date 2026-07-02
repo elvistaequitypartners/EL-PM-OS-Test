@@ -14,7 +14,7 @@ Key principle: "NLX is the new UX — Natural Language Experience. When the inte
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the product context and user personas (especially AI-embracer vs. skeptic split). Read the PRD or feature description.
+Read `memory/personal/${USER}.md` for the product context and user personas (especially AI-embracer vs. skeptic split). Read the PRD or feature description.
 
 ## Step 2 — NLX Design Principles
 

@@ -17,7 +17,7 @@ Key data from Palle Broe: Of 44 leading tech incumbents:
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, business model, and existing pricing. Read `context/company/competitors.md` for competitive pricing context.
+Read `memory/personal/${USER}.md` for product stage, business model, and existing pricing. Read `context/company/competitors.md` for competitive pricing context.
 
 ## Step 2 — The Three Monetization Models
 

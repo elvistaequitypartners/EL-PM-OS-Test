@@ -12,7 +12,7 @@ Framework: April Dunford (Obviously Awesome — positioning-first messaging), Le
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context, ICP, and current bets. Read `context/company/competitors.md` for competitive context. Apply April Dunford's 5-component positioning as the foundation.
+Read `memory/personal/${USER}.md` for product context, ICP, and current bets. Read `context/company/competitors.md` for competitive context. Apply April Dunford's 5-component positioning as the foundation.
 
 ## Step 2 — Positioning Foundation
 

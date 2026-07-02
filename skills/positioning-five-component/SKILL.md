@@ -12,7 +12,7 @@ Key principle from Dunford: "Positioning has 5 components: competitive alternati
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context and current bets. Read `context/company/competitors.md` and `context/product/personas.md` if they exist.
+Read `memory/personal/${USER}.md` for product context and current bets. Read `context/company/competitors.md` and `context/product/personas.md` if they exist.
 
 ## Step 2 — The Dunford 5-Component Framework
 

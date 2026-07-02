@@ -19,7 +19,7 @@ If `$ARGUMENTS` is empty, ask: "Which feature or initiative do you want to retro
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — past decisions, tracked risks, lessons learned
+- `memory/personal/${USER}.md` — past decisions, tracked risks, lessons learned
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 
 Search for the original PRD or discovery brief:
@@ -28,7 +28,7 @@ Search for the original PRD or discovery brief:
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is sparse, AND no original PRD/discovery brief is found, a retro is still valuable — it just starts from the user's recollection. Ask:
+If `memory/personal/${USER}.md` doesn't exist or is sparse, AND no original PRD/discovery brief is found, a retro is still valuable — it just starts from the user's recollection. Ask:
 
 1. "What did you ship and what was it supposed to achieve?"
 2. "What metrics were you hoping to move?"
@@ -145,7 +145,7 @@ This is the most important save — retro lessons compound over time.
 
 Offer to:
 - Save the retro to `outputs/retro-[feature]-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - Lessons learned (→ `lessons_learned`)
   - Resolved risks (remove from `tracked_risks`)
   - Updated roadmap state based on results

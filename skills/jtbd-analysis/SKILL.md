@@ -12,7 +12,7 @@ Key principle: "People don't buy products; they hire them to make progress in th
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context, and `context/product/personas.md` for user segments. Identify any existing JTBD insights already captured.
+Read `memory/personal/${USER}.md` for product context, and `context/product/personas.md` for user segments. Identify any existing JTBD insights already captured.
 
 ## Step 2 — Identify the Struggling Moment
 
@@ -91,4 +91,4 @@ Produce a JTBD summary:
 **Key habit:** [The most powerful inertia keeping them with the old way]
 **Implications for us:** [What this means for positioning, onboarding, and messaging]
 
-Offer to add JTBD findings to `memory/user-profile.md` and to relevant persona sections.
+Offer to add JTBD findings to `memory/personal/${USER}.md` and to relevant persona sections.

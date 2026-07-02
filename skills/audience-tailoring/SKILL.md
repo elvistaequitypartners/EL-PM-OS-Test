@@ -12,7 +12,7 @@ Framework: Pyramid Principle (structure matches audience's decision-making needs
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for stakeholder details — their roles, communication styles, sensitivities, and history. The more specific the memory, the more tailored the output.
+Read `memory/personal/${USER}.md` for stakeholder details — their roles, communication styles, sensitivities, and history. The more specific the memory, the more tailored the output.
 
 ## Step 2 — Understand the Source Content
 

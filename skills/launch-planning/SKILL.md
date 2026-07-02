@@ -12,7 +12,7 @@ Framework: April Dunford (positioning-first launch), Lenny Rachitsky (GTM framew
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context, stakeholders, and stack (issue tracker, comms tools). Read `context/product/roadmap.md` for launch timeline and OKR context.
+Read `memory/personal/${USER}.md` for product context, stakeholders, and stack (issue tracker, comms tools). Read `context/product/roadmap.md` for launch timeline and OKR context.
 
 ## Step 2 — Launch Scope Classification
 
@@ -91,7 +91,7 @@ Define the rollback plan before launch day:
 Schedule:
 - **T+7 day review:** Is the feature being used? Are there unexpected issues? Is the metric moving?
 - **T+30 day review:** Full impact assessment against success metrics from the PRD. Document lessons learned.
-- **Memory update:** Offer to save launch lessons to `memory/user-profile.md`
+- **Memory update:** Offer to save launch lessons to `memory/personal/${USER}.md`
 
 ## Step 7 — Output
 

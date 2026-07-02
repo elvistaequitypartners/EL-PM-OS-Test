@@ -12,7 +12,7 @@ Framework: AARRR (Retention stage), Lenny Rachitsky's retention benchmarks, Nort
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage and business model. Read `context/company/analytics-baseline.md` for existing retention baselines and targets.
+Read `memory/personal/${USER}.md` for product stage and business model. Read `context/company/analytics-baseline.md` for existing retention baselines and targets.
 
 ## Step 2 — Understanding the Cohort Data
 

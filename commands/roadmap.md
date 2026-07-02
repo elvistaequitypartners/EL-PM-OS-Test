@@ -19,7 +19,7 @@ If `$ARGUMENTS` is empty or "sync", this is a full roadmap refresh. Otherwise, t
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — roadmap state, OKRs, current bets, stakeholders
+- `memory/personal/${USER}.md` — roadmap state, OKRs, current bets, stakeholders
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/mission.md` (if it exists)
 
@@ -27,7 +27,7 @@ Note any conflicts between the memory profile's `roadmap_state` and the roadmap 
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, do NOT stop or produce an empty roadmap. Instead, ask 3 quick questions:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, do NOT stop or produce an empty roadmap. Instead, ask 3 quick questions:
 
 1. "What are the 2–3 biggest things your team is working on right now?"
 2. "What are your top 1–2 goals or OKRs this quarter?"
@@ -118,7 +118,7 @@ Generate three versions of the roadmap for different audiences:
 
 After outputting the roadmap:
 1. Offer to save it to `outputs/roadmap-[date].md`
-2. Update `memory/user-profile.md` with:
+2. Update `memory/personal/${USER}.md` with:
    - Current roadmap state (Now/Next/Later summary)
    - Any new decisions made (→ `decided_and_why`)
    - Pre-mortem risks identified (→ `tracked_risks`)

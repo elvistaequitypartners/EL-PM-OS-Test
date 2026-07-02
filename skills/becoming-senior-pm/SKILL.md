@@ -14,7 +14,7 @@ Key insight: The promotion to Senior PM is almost never about doing more of the 
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the user's current role, company stage, and team context. Understand what "Senior PM" means at their specific company — the definition varies significantly.
+Read `memory/personal/${USER}.md` for the user's current role, company stage, and team context. Understand what "Senior PM" means at their specific company — the definition varies significantly.
 
 ## Step 2 — The Real Difference
 

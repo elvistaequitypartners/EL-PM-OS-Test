@@ -14,7 +14,7 @@ Key principle: "The most meaningful segmentation for AI products is attitudinal:
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` and `context/product/personas.md`. Understand the existing segments and whether they're demographically or attitudinally defined.
+Read `memory/personal/${USER}.md` and `context/product/personas.md`. Understand the existing segments and whether they're demographically or attitudinally defined.
 
 ## Step 2 — The Core Attitudinal Dimensions
 
@@ -91,4 +91,4 @@ Produce:
 - Conversion path design
 - Top 3 actions to improve experience for the segment most at risk of churn
 
-Offer to update `context/product/personas.md` with attitudinal layer and save insights to `memory/user-profile.md`.
+Offer to update `context/product/personas.md` with attitudinal layer and save insights to `memory/personal/${USER}.md`.

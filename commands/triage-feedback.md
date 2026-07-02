@@ -25,7 +25,7 @@ If no input, ask: "Paste your feedback, provide file paths, or tell me which too
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product context, current OKRs, roadmap state
+- `memory/personal/${USER}.md` — product context, current OKRs, roadmap state
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/product/personas.md` (fallback: `context/product/personas-template.md`)
 
@@ -33,7 +33,7 @@ Context is critical: strategic fit scoring depends on knowing what's already bei
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, feedback triage still works — just without strategic fit scoring. Ask:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, feedback triage still works — just without strategic fit scoring. Ask:
 
 1. "What product is this feedback about?" (one sentence)
 2. "What are you focused on building right now?" (so strategic fit can be assessed)
@@ -148,7 +148,7 @@ Produce:
 
 Offer to:
 - Save to `outputs/feedback-triage-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - New pain points discovered (→ potential roadmap items)
   - Open questions from feedback (→ `open_questions`)
   - Persona updates (→ note in memory)

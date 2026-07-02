@@ -12,7 +12,7 @@ Frameworks: Marty Cagan (vision as a north star), Shreyas Doshi (vision → stra
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product name, stage, core user problem, and current bets. Read `context/company/mission.md` for company direction and values.
+Read `memory/personal/${USER}.md` for product name, stage, core user problem, and current bets. Read `context/company/mission.md` for company direction and values.
 
 ## Step 2 — Vision Inputs
 
@@ -63,4 +63,4 @@ Produce:
 - A "what this makes obvious" section: top 3 things this vision makes obviously worth doing, and top 3 things it makes obviously not worth doing
 - Strategy coherence check result
 
-Offer to save the chosen vision to `memory/user-profile.md` as `current_bets` context.
+Offer to save the chosen vision to `memory/personal/${USER}.md` as `current_bets` context.

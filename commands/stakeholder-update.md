@@ -21,7 +21,7 @@ If `$ARGUMENTS` is empty, ask: "Which initiative do you want to update stakehold
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — stakeholder names, roles, communication preferences, sensitivities, roadmap state
+- `memory/personal/${USER}.md` — stakeholder names, roles, communication preferences, sensitivities, roadmap state
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/templates/stakeholder-update-template.md` — output template
 
@@ -33,7 +33,7 @@ From memory, identify:
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or has no stakeholder data, do NOT produce a generic update. Instead, ask:
+If `memory/personal/${USER}.md` doesn't exist or has no stakeholder data, do NOT produce a generic update. Instead, ask:
 
 1. "Who is this update for? (name and role — e.g., 'Sarah, VP Engineering')"
 2. "What do they care about most — timeline, metrics, risks, or decisions?"
@@ -113,7 +113,7 @@ Present the three versions clearly labeled. Offer to:
 ## Step 7 — Update Memory
 
 After generating the update:
-- Update `memory/user-profile.md` with the current initiative status
+- Update `memory/personal/${USER}.md` with the current initiative status
 - Flag any blockers as tracked risks (→ `tracked_risks`)
 - Note any decisions surfaced (→ `decided_and_why`)
 - Update the last-contact date for stakeholders mentioned

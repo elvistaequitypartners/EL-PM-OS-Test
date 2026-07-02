@@ -12,7 +12,7 @@ Frameworks: Bob Moesta / JTBD (demand-side thinking), Hilary Gridley (AI-embrace
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context and any existing persona notes. Read `context/product/personas.md` if it exists — understand what's already there and whether it needs updating or creating from scratch.
+Read `memory/personal/${USER}.md` for product context and any existing persona notes. Read `context/product/personas.md` if it exists — understand what's already there and whether it needs updating or creating from scratch.
 
 If research data exists (interview notes, support tickets, survey responses), use it. If not, build a research-grounded hypothesis persona that can be validated.
 
@@ -84,4 +84,4 @@ Produce:
 - Each persona filled in using the template above
 - A 1-page "user cheat sheet" that captures the essential differences between the personas for team use
 
-Offer to save to `context/product/personas.md` and update `memory/user-profile.md` with any new persona insights.
+Offer to save to `context/product/personas.md` and update `memory/personal/${USER}.md` with any new persona insights.

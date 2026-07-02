@@ -12,7 +12,7 @@ Framework: Hamel Husain + Shreya Shankar (Building eval systems, 2025), annotati
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the AI feature being evaluated. Understand: what are the failure categories from error analysis? What is the principal domain expert's quality bar?
+Read `memory/personal/${USER}.md` for the AI feature being evaluated. Understand: what are the failure categories from error analysis? What is the principal domain expert's quality bar?
 
 ## Step 2 — When to Run Human Evals
 

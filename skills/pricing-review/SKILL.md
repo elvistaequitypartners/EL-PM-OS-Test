@@ -14,7 +14,7 @@ Key insight from Palle Broe's analysis of 44 tech incumbents: 59% bundle AI feat
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, business model, and current bets. Read `context/company/competitors.md` for competitive pricing context.
+Read `memory/personal/${USER}.md` for product stage, business model, and current bets. Read `context/company/competitors.md` for competitive pricing context.
 
 ## Step 2 — Pricing Model Selection
 

@@ -80,7 +80,7 @@ Say yes to save all, or tell me which ones to keep.
 
 ## Writing to Memory
 
-When the user confirms, write only the confirmed items to `memory/user-profile.md`:
+When the user confirms, write only the confirmed items to `memory/personal/${USER}.md`:
 
 - Follow all memory writing rules from the memory skill (add with dates, don't overwrite, resolve don't delete)
 - Always update `last_updated`

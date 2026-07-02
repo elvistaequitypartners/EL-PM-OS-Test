@@ -12,7 +12,7 @@ Framework: Lenny Rachitsky (North Star guide, survey of 40+ top companies), Sean
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, business model, and current metrics. Read `context/company/analytics-baseline.md` for available metrics.
+Read `memory/personal/${USER}.md` for product stage, business model, and current metrics. Read `context/company/analytics-baseline.md` for available metrics.
 
 ## Step 2 — Gather the Candidates
 
