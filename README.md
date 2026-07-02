@@ -2,20 +2,22 @@
 
 ### Plugin for Claude Code, Claude Cowork, Claude Desktop, and Claude.AI Web || Product Faculty
 
-Stop working like a 2022 PM. Start operating like an AI-native one.
+Stop working like a 2022 PM. Start operating like an AI-native one — solo *or* as a team.
 
-PM Operating System is your AI Product Manager and an AI operating system for your product work.
+PM Operating System is your AI Product Manager and an AI operating system for your product work. As of v3.0, it's team-aware: multiple PMs can share product context, roadmap state, and decisions through git — without last-writer-wins overwrites, without giving up personal notes.
 
-65+ embedded PM skills across 12 domains
-17 command-based workflows (end-to-end execution, not prompts)
-8 specialized sub-agents (discovery, strategy, GTM, metrics, etc.)
-Persistent memory that evolves with your product
+- **65+** embedded PM skills across 12 domains
+- **19** command-based workflows (end-to-end execution, not prompts)
+- **8** specialized sub-agents (discovery, strategy, GTM, metrics, etc.)
+- **Three-layer memory** — personal (private) / team (shared, PR-reviewed) / org (2-approval) — with immutable ADRs for durable decisions
+- **GitOps governance** — schemas, CODEOWNERS, CI validation, staleness reconciler, prompt-injection scanner
+- **Tracker sync** — hourly Linear/Jira → YAML for live roadmap state
 
 Every command pulls your full context, connects to your tools, and executes like a real operator.
 
-It’s time to become a 100x Product Manager.
+It's time to become a 100x Product Manager — and a 100x product *team*.
 
-Built by Product Faculty: We run [#1 AI PM Certification](https://maven.com/product-faculty/ai-product-management-certification?promoCode=git) - trusted by 3,000+ PMs (1,000+ reviews) learning how to build and operate AI-native products.
+Built by Product Faculty: We run [#1 AI PM Certification](https://maven.com/product-faculty/ai-product-management-certification?promoCode=git) — trusted by 3,000+ PMs (1,000+ reviews) learning how to build and operate AI-native products.
 
 ---
 
@@ -24,15 +26,19 @@ Built by Product Faculty: We run [#1 AI PM Certification](https://maven.com/prod
 - [Install](#install)
 - [Quick Start](#quick-start)
 - [What's Inside](#whats-inside)
-  - [17 Slash Commands](#17-slash-commands)
+  - [19 Slash Commands](#19-slash-commands)
   - [65 PM Skills Across 12 Domains](#65-pm-skills-across-12-domains)
   - [8 Specialized Sub-Agents](#8-specialized-sub-agents)
-  - [Persistent User Memory](#persistent-user-memory)
+  - [Three-Layer Memory Model](#three-layer-memory-model)
   - [Live Tool Connectors (MCP)](#live-tool-connectors-mcp)
   - [Gossip Mode](#gossip-mode)
+- [Team Mode](#team-mode)
+  - [Layered memory in one picture](#layered-memory-in-one-picture)
+  - [Promoting personal memory to team scope](#promoting-personal-memory-to-team-scope)
+  - [Architecture Decision Records (ADRs)](#architecture-decision-records-adrs)
+  - [GitOps governance](#gitops-governance)
+  - [Tracker integration](#tracker-integration)
 - [Platform Guide](#platform-guide)
-  - [Claude Code (CLI)](#claude-code-cli)
-  - [Claude Cowork (Desktop)](#claude-cowork-desktop)
 - [MCP Setup (Claude Code)](#mcp-setup-claude-code)
 - [Connector Setup (Claude Cowork)](#connector-setup-claude-cowork)
 - [Project Structure](#project-structure)
@@ -54,7 +60,7 @@ claude plugin install .
 Or install from a Git URL:
 
 ```bash
-claude plugin install https://github.com/yourorg/pm-aios
+claude plugin install https://github.com/yourorg/pm-os
 ```
 
 ### Claude Cowork (Desktop)
@@ -66,9 +72,11 @@ claude plugin install https://github.com/yourorg/pm-aios
 
 ### First Run
 
-On first run, PM Operating System launches the onboarding wizard automatically. It asks 10 questions about your product, stack, stakeholders, and working style — then writes your persistent memory profile. Takes about 5 minutes, and you never have to re-brief Claude again.
+On first run, PM Operating System launches the onboarding wizard automatically. It asks 10 questions about your product, stack, stakeholders, and working style — then writes your **personal** memory profile at `memory/personal/<your-username>.md` and offers to promote team-relevant answers (roadmap, stakeholders, personas) into shared team memory via PR.
 
-You can also trigger it manually:
+Takes about 5 minutes, and you never have to re-brief Claude again.
+
+Trigger manually with:
 
 ```
 /onboarding
@@ -84,28 +92,30 @@ Once installed and onboarded:
 
 | What you want to do | Command |
 |---|---|
-| Set up your PM profile (first time) | `/onboarding` |
+| Set up your personal profile (first time) | `/onboarding` |
 | Start your day with a briefing | `/brief-me` |
 | Write a PRD from a feature idea | `/write-prd smart notifications for enterprise users` |
-| Review your roadmap | `/roadmap` |
+| Review your team roadmap | `/roadmap` |
+| Promote a personal note into team memory | `/promote-memory <what to promote>` |
+| Capture a durable decision as an ADR | `/adr <decision title>` |
 | Send a stakeholder update | `/stakeholder-update` |
 | Run a strategy review | `/strategy-review` |
 | Triage user feedback | `/triage-feedback` |
 
-Every command pulls your memory profile, loads relevant context files, and connects to your live tools (Linear, Jira, Slack, Notion) if configured. No re-briefing, no context-setting — just go.
+Every command pulls your layered memory context (org → team → personal → recent ADRs), loads relevant files, and connects to your live tools (Linear, Jira, Slack, Notion) if configured. No re-briefing, no context-setting — just go.
 
 ---
 
 ## What's Inside
 
-### 17 Slash Commands
+### 19 Slash Commands
 
 Commands are chained workflows that wire multiple skills together into end-to-end operations.
 
 | Command | What it does |
 |---|---|
-| `/onboarding` | First-run setup wizard — 10 questions about your product, stack, stakeholders, and working style. Writes your persistent memory profile |
-| `/brief-me` | Your morning briefing — loads memory, pulls live state from all connected tools, surfaces risks and staleness, recommends where to start |
+| `/onboarding` | First-run setup wizard — 10 questions about your product, stack, stakeholders, and working style. Writes your personal profile and offers team-scope promotions |
+| `/brief-me` | Your morning briefing — loads memory, pulls live state from all connected tools, surfaces risks and open ADRs, recommends where to start |
 | `/write-prd` | JTBD analysis, OST framing, full PRD from template, prototype-ready spec, GTM positioning section |
 | `/roadmap` | OKR alignment, Now/Next/Later structuring, dependency mapping, 3 stakeholder views (exec/eng/customer) |
 | `/stakeholder-update` | Pull tracker + Slack context, produce audience-tailored updates (exec: Pyramid Principle, eng: context-first, customer: narrative) |
@@ -121,10 +131,12 @@ Commands are chained workflows that wire multiple skills together into end-to-en
 | `/set-okrs` | Structure OKRs from strategy context, validate measurability, align to North Star |
 | `/design-ai-feature` | AI-specific: validate AI necessity, model tier selection, prompt architecture, eval framework, cost model, NLX UX |
 | `/weekly-digest` | Pull week's activity from all connected tools, compile digest with wins, blockers, and next-week focus |
+| **`/promote-memory`** | **New in v3.0** — escalate a fact from your personal profile into shared team memory via PR |
+| **`/adr`** | **New in v3.0** — capture a durable product decision as an Architecture Decision Record, immutable once merged |
 
 ### 65 PM Skills Across 12 Domains
 
-Skills are the atomic units of PM knowledge. Each skill lives in `skills/[name]/SKILL.md`, fires automatically when relevant, and can also be invoked directly. Every skill loads your memory profile and offers to update it when done.
+Skills are the atomic units of PM knowledge. Each skill lives in `skills/[name]/SKILL.md`, fires automatically when relevant, and can also be invoked directly. Every skill loads your layered memory context and routes writes to the right scope (personal / team via PR / org / ADR).
 
 | Domain | Skills | Key Frameworks |
 |---|---|---|
@@ -155,22 +167,18 @@ Sub-agents are isolated workers that handle complex, multi-step PM tasks. When a
 | **GTM Planner** | Launch planning, ICP definition, messaging hierarchy, positioning, pricing review | 7 GTM skills |
 | **AI Evaluator** | Error analysis, eval suite design, LLM-as-judge pipelines, regression testing | 6 AI eval skills |
 
-### Persistent User Memory
+### Three-Layer Memory Model
 
-PM Operating System maintains a structured memory profile (`memory/user-profile.md`) that grows with every session. It stores:
+PM Operating System v3.0 replaces the single `memory/user-profile.md` with a **layered memory hierarchy** modeled on Claude Code's own precedence rules and Letta/Mem0's scoped-memory patterns. Every session loads all three layers automatically.
 
-- **Product context** — name, stage, core user problem, business model, current bets
-- **Stack** — issue tracker, docs tool, comms tool, analytics tool, design tool
-- **Working style** — PRD format preference, verbosity level, preferred frameworks, things to avoid
-- **Stakeholders** — names, roles, communication styles, sensitivities, interaction history
-- **Roadmap state** — Now / Next / Later items with dates, owners, and decisions
-- **Open questions** — unresolved assumptions with dates (auto-surfaced when stale)
-- **Tracked risks** — active risks with status (auto-prompted for review every 7 days)
-- **Lessons learned** — insights from retros, tied to specific initiatives
+| Layer | Path | Trust | Who writes |
+|---|---|---|---|
+| **Personal** | `memory/personal/<user>.md` | Trusted (self-written) | Direct edit — gitignored |
+| **Team** | `memory/team/<team>/{roadmap,risks,personas,stakeholders}.yaml` + `digests/*.md` | Untrusted (multi-writer) | PR via `/promote-memory` |
+| **Org** | `memory/org/*.md` | Untrusted | Direct PR, 2 approvals required |
+| **Decisions** | `memory/decisions/adr-NNNN-*.md` | Immutable once merged | PR via `/adr` |
 
-**Session start protocol:** Every session, PM Operating System checks your memory for staleness (>7 days), aged open questions (>14 days), upcoming milestones (<7 days), and overdue roadmap items — then surfaces what needs attention before you even ask.
-
-**Session end protocol:** After any meaningful session (PRD written, roadmap decision made, risk surfaced), PM Operating System offers to update your memory so the next session starts with full context.
+At session start, PM Operating System loads `org → team → personal → recent decisions` in precedence order (personal wins on conflict, never leaks upward). See the [Team Mode](#team-mode) section for the full picture.
 
 ### Live Tool Connectors (MCP)
 
@@ -178,9 +186,9 @@ Connect once, and every command pulls live data from your actual stack:
 
 | Tool | What PM Operating System reads | What PM Operating System writes |
 |---|---|---|
-| **Linear** | Issues, roadmap state, sprint backlog, blockers | Tickets, status updates |
-| **Jira** | Board, backlog, sprint state, blockers | Issues, status updates |
-| **Notion** | Spec pages, knowledge base, meeting notes | Spec drafts, research docs |
+| **Linear** | Issues, roadmap state, sprint backlog, blockers | Tickets, status updates. Also feeds hourly `tracker-sync` into team roadmap YAML |
+| **Jira** | Board, backlog, sprint state, blockers | Issues, status updates. Also feeds hourly `tracker-sync` |
+| **Notion** | Spec pages, knowledge base, meeting notes | Spec drafts, research docs, PRD pushes |
 | **Slack** | Channel context, thread sentiment, decisions, @mentions | Stakeholder updates |
 | **GitHub** | Issue backlog, PR velocity, engineering output | — |
 
@@ -188,7 +196,80 @@ All connectors are optional. PM Operating System works fully without them — it
 
 ### Gossip Mode
 
-Speak informally — voice-to-text, stream-of-consciousness, "you won't believe what happened in standup" — and PM Operating System parses it into structured memory updates. It extracts stakeholder signals, roadmap changes, risks, decisions, and team dynamics, then offers to save them. Designed to complete in under 60 seconds.
+Speak informally — voice-to-text, stream-of-consciousness, "you won't believe what happened in standup" — and PM Operating System parses it into structured memory updates. It extracts stakeholder signals, roadmap changes, risks, decisions, and team dynamics, then routes each to the right scope (personal by default; offers `/promote-memory` for team-relevant items). Designed to complete in under 60 seconds.
+
+---
+
+## Team Mode
+
+v3.0 makes PM Operating System usable by multiple PMs sharing the same repo. The design is documented in full in [`memory/decisions/adr-0001-adopt-team-shared-memory.md`](./memory/decisions/adr-0001-adopt-team-shared-memory.md) and the design proposal (`PMOS_Readme.md` — team-shared design doc). Highlights below.
+
+### Layered memory in one picture
+
+```
+memory/
+├── org/                            # company-wide, 2 approvals to merge
+│   └── mission.md
+├── team/
+│   └── <team-name>/                # PR-reviewed by any team PM
+│       ├── roadmap.yaml            # ← schema-validated
+│       ├── risks.yaml
+│       ├── personas.yaml
+│       ├── stakeholders.yaml
+│       └── digests/                # append-only weekly narrative
+├── personal/                       # gitignored per-PM notes
+│   └── <user>.md
+├── decisions/                      # ADRs, immutable once merged
+│   └── adr-NNNN-<slug>.md
+└── schemas/                        # JSON Schema draft-07 for every YAML
+```
+
+**Load precedence at session start:** `org → team → personal → 10 most recent ADRs`. Personal wins on conflict but never leaks upward.
+
+### Promoting personal memory to team scope
+
+Nothing moves from personal to team silently. When you want to share:
+
+```
+/promote-memory the CTO's new caching preference
+```
+
+Claude reads your personal notes, identifies the fact, routes it to the right team YAML file (`stakeholders.yaml`, `risks.yaml`, `roadmap.yaml`, etc.), validates the shape against the schema, opens a branch, and creates a PR labeled `memory-promotion`. Your teammates review, request changes if needed, and merge — that's when it becomes team truth.
+
+### Architecture Decision Records (ADRs)
+
+Durable cross-team decisions get their own record:
+
+```
+/adr adopt streaming-first ingestion for v2
+```
+
+Creates `memory/decisions/adr-NNNN-<slug>.md` in `proposed` status with the ADR template (Context, Decision, Consequences, Alternatives). Merges to `accepted`. If reversed later, a new ADR sets `supersedes: [ADR-XXXX]` — ADRs are never edited, only superseded.
+
+### GitOps governance
+
+Everything in `memory/team/**` and `memory/org/**` is treated as [content-as-code](https://github.com/open-gitops/documents/blob/main/PRINCIPLES.md):
+
+- **Declarative** — the YAML files *are* the roadmap
+- **Versioned & immutable** — `git blame` shows who changed which risk, when
+- **Pulled automatically** — the SessionStart hook at `.claude/hooks/session-start.sh` runs `git pull --rebase` on every session
+- **Continuously reconciled** — CI runs on every PR:
+  - **`validate.yml`** — JSON Schema validation, markdown lint, prompt-injection scanner
+  - **`staleness.yml`** — weekly cron, opens issues for files without a `last_updated` refresh in 30 days
+  - **`tracker-sync.yml`** — hourly Linear/Jira → YAML sync (PM-owned fields never overwritten)
+
+`.github/CODEOWNERS` routes review by path:
+
+- `memory/personal/*` → author only
+- `memory/team/**` → `@vista-pm-guild` (any team PM)
+- `memory/org/**` → `@head-of-product @product-ops` (two approvals)
+- `memory/decisions/**` → `@head-of-product`
+
+### Tracker integration
+
+`memory/team/<team>/roadmap.yaml` links initiatives to Linear projects or Jira epics via `linear_project_id` / `jira_epic_key`. An hourly workflow (`tracker-sync.yml`) pulls `tracker_status`, `target_date`, and `owner` from the tracker and opens a PR on any drift. PM-owned fields (`title`, `strategic_bet`, `adr_refs`) are never touched by the bot — the split is by field, not by document.
+
+For volatile data (velocity, this-sprint blockers), the session-start MCP query fetches it live instead of caching to disk.
 
 ---
 
@@ -200,15 +281,16 @@ PM Operating System runs on every Claude surface. Here's what to know for each.
 
 This is the full-power experience. Everything works out of the box:
 
-- All 17 slash commands via `/command-name`
+- All 19 slash commands via `/command-name`
 - All 65 skills fire automatically based on context
 - 8 specialized sub-agents for complex multi-step workflows
 - MCP connectors via `.mcp.json` (Linear, Jira, Notion, Slack, GitHub)
 - Sub-agent parallelism for commands like `/brief-me` and `/roadmap`
 - File I/O for reading context, writing outputs, and updating memory
 - `CLAUDE.md` loads automatically as global instructions
+- SessionStart hook (`.claude/hooks/session-start.sh`) reconciles team memory on every session
 
-**Requirements:** Claude Code CLI installed, Node.js (for MCP servers via npx)
+**Requirements:** Claude Code CLI installed, Node.js (for MCP servers via npx), git (for team-memory GitOps flow)
 
 ### Claude Cowork (Desktop)
 
@@ -224,6 +306,7 @@ Cowork provides the same skills and commands through a visual interface with aut
 - Connector setup is via UI, not `.mcp.json` — see [Connector Setup](#connector-setup-claude-cowork)
 - No terminal required — everything happens in the desktop app
 - Tasks can be scheduled to run on a recurring basis
+- SessionStart hook not supported natively — pull team memory manually or via a scheduled task
 
 **Requirements:** Claude Desktop app with Cowork enabled (Pro or Max subscription, macOS)
 
@@ -231,27 +314,39 @@ Cowork provides the same skills and commands through a visual interface with aut
 
 ## MCP Setup (Claude Code)
 
-The `.mcp.json` file in the project root configures five MCP servers. Set environment variables for the connectors you use:
+The `.mcp.json` file in the project root configures five MCP servers. Copy `.env.example` to `.env` and fill in the credentials for the connectors you use:
+
+```bash
+cp .env.example .env
+# edit .env with your tokens
+```
+
+Contents of `.env.example`:
 
 ```bash
 # Linear
-export LINEAR_API_KEY=lin_api_...
+LINEAR_API_KEY=lin_api_...
 
 # Jira
-export JIRA_URL=https://yourorg.atlassian.net
-export JIRA_EMAIL=you@company.com
-export JIRA_API_TOKEN=...
+JIRA_URL=https://yourorg.atlassian.net
+JIRA_EMAIL=you@company.com
+JIRA_API_TOKEN=...
 
 # Notion
-export NOTION_API_KEY=secret_...
+NOTION_API_KEY=secret_...
 
 # Slack
-export SLACK_BOT_TOKEN=xoxb-...
-export SLACK_TEAM_ID=T...
+SLACK_BOT_TOKEN=xoxb-...
+SLACK_TEAM_ID=T...
 
 # GitHub
-export GITHUB_TOKEN=ghp_...
+GITHUB_TOKEN=ghp_...
+
+# Optional: override team resolved from .pm-os.yaml
+# PM_TEAM=platform
 ```
+
+`.env` is gitignored — never commit real credentials. `.env.example` is the committed template, safe to share.
 
 Only configure the tools you use. Unconfigured connectors are silently skipped.
 
@@ -275,11 +370,25 @@ Once connected, PM Operating System commands automatically pull live data from y
 ```
 pm-os/
 ├── .claude-plugin/
-│   └── plugin.json              # Plugin manifest (name, version, metadata only)
-├── .mcp.json                    # MCP server config (Claude Code only)
-├── CLAUDE.md                    # Global instructions loaded every session
+│   ├── plugin.json                # Plugin manifest (name, version, metadata)
+│   └── marketplace.json           # Marketplace entry
+├── .claude/
+│   ├── hooks/
+│   │   └── session-start.sh       # SessionStart: git pull --rebase + $CURRENT_TEAM
+│   └── settings.json              # Hook wiring + permission allowlist
+├── .github/
+│   ├── CODEOWNERS                 # Route review by memory scope
+│   └── workflows/
+│       ├── validate.yml           # JSON Schema + markdown lint + injection scanner
+│       ├── staleness.yml          # Weekly staleness reconciler
+│       └── tracker-sync.yml       # Hourly Linear/Jira → YAML sync
+├── .mcp.json                      # MCP server config (Claude Code only)
+├── .env.example                   # Per-user secret template (copy to .env)
+├── .pm-os.yaml                    # Team / members / trackers config
+├── .pre-commit-config.yaml        # Schema + markdown lint (local)
+├── CLAUDE.md                      # Global instructions loaded every session
 │
-├── commands/                    # 17 slash commands (chained workflows)
+├── commands/                      # 19 slash commands (chained workflows)
 │   ├── onboarding.md
 │   ├── brief-me.md
 │   ├── write-prd.md
@@ -296,9 +405,11 @@ pm-os/
 │   ├── retro.md
 │   ├── set-okrs.md
 │   ├── design-ai-feature.md
-│   └── weekly-digest.md
+│   ├── weekly-digest.md
+│   ├── promote-memory.md          # v3.0
+│   └── adr.md                     # v3.0
 │
-├── agents/                      # 8 specialized sub-agents (isolated workers)
+├── agents/                        # 8 specialized sub-agents
 │   ├── discovery-researcher.md
 │   ├── strategy-analyst.md
 │   ├── document-writer.md
@@ -308,55 +419,56 @@ pm-os/
 │   ├── gtm-planner.md
 │   └── ai-evaluator.md
 │
-├── skills/                      # 65 skills — flat structure (skills/[name]/SKILL.md)
-│   ├── memory/SKILL.md          # System
-│   ├── onboarding/SKILL.md
-│   ├── gossip/SKILL.md
-│   ├── problem-framing/SKILL.md # Discovery (7)
-│   ├── jtbd-analysis/SKILL.md
-│   ├── ...
-│   ├── vision-setting/SKILL.md  # Strategy (9)
-│   ├── seven-powers/SKILL.md
-│   ├── ...
-│   ├── prd-authoring/SKILL.md   # Execution (5)
-│   ├── ...
-│   ├── exec-summary/SKILL.md    # Stakeholder (6)
-│   ├── ...
-│   ├── persona-development/SKILL.md  # Market & Users (6)
-│   ├── ...
-│   ├── ab-test-design/SKILL.md  # Metrics (6)
-│   ├── ...
-│   ├── error-analysis/SKILL.md  # AI Evals (6)
-│   ├── ...
-│   ├── launch-planning/SKILL.md # GTM (7)
-│   ├── ...
-│   ├── vibe-coding/SKILL.md     # Prototyping (5)
-│   ├── ...
-│   └── founding-pm/SKILL.md     # Career (5)
+├── skills/                        # 65 skills — skills/[name]/SKILL.md
+│   ├── memory/SKILL.md            # v3.0 — three-scope routing
+│   └── ... (64 more)
 │
-├── context/                     # Your product context (you fill these in)
+├── memory/                        # v3.0 layered memory
+│   ├── org/                       # Company-wide, 2-approval merges
+│   │   └── mission.md
+│   ├── team/                      # PR-reviewed team state
+│   │   └── platform/
+│   │       ├── roadmap.yaml
+│   │       ├── risks.yaml
+│   │       ├── personas.yaml
+│   │       ├── stakeholders.yaml
+│   │       └── digests/
+│   ├── personal/                  # Gitignored per-PM notes
+│   │   └── README.md              # Format reference
+│   ├── decisions/                 # ADRs — immutable once merged
+│   │   └── adr-0001-adopt-team-shared-memory.md
+│   ├── schemas/                   # JSON Schema draft-07 for every YAML
+│   │   ├── profile.schema.json
+│   │   ├── roadmap.schema.json
+│   │   ├── risks.schema.json
+│   │   ├── personas.schema.json
+│   │   └── stakeholders.schema.json
+│   ├── user-profile.md            # Deprecated stub (kept for legacy)
+│   └── schema.md                  # Legacy schema docs
+│
+├── scripts/                       # v3.0 automation
+│   ├── sync_trackers.py           # Linear/Jira → roadmap.yaml
+│   └── staleness_scan.py          # Opens GitHub issues for stale files
+│
+├── context/                       # Legacy narrative context (fallback)
 │   ├── company/
-│   │   ├── mission.md           # Company mission, stage, values
-│   │   ├── competitors.md       # Competitive landscape
-│   │   ├── customer-feedback.md # Recurring feedback themes
-│   │   ├── analytics-baseline.md # Metric definitions and baselines
-│   │   └── past-prds.md         # Previous PRDs for tone reference
+│   │   ├── mission.md
+│   │   ├── competitors.md
+│   │   ├── customer-feedback.md
+│   │   ├── analytics-baseline.md
+│   │   └── past-prds.md
 │   ├── product/
-│   │   ├── personas.md          # User personas (or use template)
-│   │   └── roadmap.md           # Current roadmap (or use template)
+│   │   ├── personas.md
+│   │   └── roadmap.md
 │   └── templates/
 │       ├── prd-template.md
 │       ├── research-synthesis-template.md
 │       ├── stakeholder-update-template.md
 │       └── weekly-report-template.md
 │
-├── memory/
-│   ├── user-profile.md          # Your persistent PM memory (auto-managed)
-│   └── schema.md                # Memory schema documentation
+├── outputs/                       # Generated deliverables (gitignored)
 │
-├── outputs/                     # Generated deliverables saved here
-│
-└── demos/                       # Example outputs
+└── demos/                         # Example outputs
     ├── demo-prd-generation.md
     ├── demo-feedback-analysis.md
     ├── demo-strategy-review.md
@@ -382,29 +494,43 @@ PM Operating System encodes the reasoning processes of the PM field's best pract
 | **Jackie Bavaro** | PM career arc frameworks | Career skills |
 | **Lenny Rachitsky** | North Star guide, PRD guide, 14 PM habits | Metrics skills, PRD authoring, `/setup-metrics` |
 | **Tal Raviv** | Hire, Onboard, Kickoff, Put to Work | Onboarding wizard |
+| **Michael Nygard** | ADR (Architecture Decision Records) | `/adr` command |
+| **OpenGitOps** | Declarative, versioned, pulled, continuously reconciled | Team memory governance |
 
 ---
 
 ## Customization
 
-### Adding Your Context
+### Adding your context
 
-The more context you provide, the better PM Operating System performs. Fill in the files under `context/`:
+Personal context lives in your gitignored personal profile. Team context lives in the shared team YAML files.
 
-1. **`context/company/mission.md`** — Your company's mission, stage (pre-seed, seed, Series A, etc.), and core values. This calibrates all scoring and recommendations.
-2. **`context/company/competitors.md`** — Key competitors and how you differentiate. Feeds battlecard generation and positioning skills.
-3. **`context/company/customer-feedback.md`** — Recurring themes from support tickets, NPS, reviews. Grounds feedback triage in real signal.
-4. **`context/product/personas.md`** — Your user personas. Use the template at `context/product/personas-template.md` to get started.
-5. **`context/product/roadmap.md`** — Your current roadmap. Use the template at `context/product/roadmap-template.md`.
+**Personal (private to you):**
+- `memory/personal/<user>.md` — auto-created by `/onboarding`. Free-form notes + YAML frontmatter (see `memory/personal/README.md` for the format).
 
-### Adjusting the Quality Bar
+**Team (shared, PR-reviewed):**
+- `memory/team/<team>/roadmap.yaml` — Now / Next / Later with initiative IDs, strategic bets, tracker links
+- `memory/team/<team>/personas.yaml` — user personas with JTBD, pains, gains, evidence
+- `memory/team/<team>/stakeholders.yaml` — internal stakeholders, comms style, influence
+- `memory/team/<team>/risks.yaml` — active risks with severity, likelihood, mitigation
+
+Every YAML file has a JSON Schema in `memory/schemas/` that CI enforces on every PR.
+
+**Org (rarely edited, 2 approvals):**
+- `memory/org/mission.md` — company mission, stage, values
+- Add `competitive-landscape.md`, `pricing-decisions.md` as needed
+
+**Legacy narrative context** in `context/` remains supported as fallback for skills that haven't migrated to YAML consumption. Prefer `memory/team/**/*.yaml` when both exist.
+
+### Adjusting the quality bar
 
 Edit `CLAUDE.md` to change global behavior:
-- Modify the **Session Start Protocol** to change what gets surfaced on each session
+- Modify the **Session Start Protocol** to change what gets loaded and in what order
 - Adjust **Framework Defaults** to swap in your preferred frameworks
 - Change **Output Conventions** for different scoring scales, output formats, or save paths
+- Extend the **Trust Boundary** section if you add new destructive MCP actions
 
-### Adding Your Own Skills
+### Adding your own skills
 
 Create a new folder under `skills/` with a `SKILL.md` file. Claude Code auto-discovers all skills at `skills/[name]/SKILL.md` — no registration needed.
 
@@ -412,37 +538,60 @@ Create a new folder under `skills/` with a `SKILL.md` file. Claude Code auto-dis
 ---
 name: your-skill-name
 description: When to trigger this skill and when not to
-version: 2.0.0
+version: 1.0.0
 ---
 
 Your skill instructions here. Follow the pattern:
-1. Load context (memory + relevant files)
+1. Use loaded context (org + team + personal — already in the session)
 2. Do the work
 3. Produce output
-4. Offer to save and update memory
+4. Route writes by scope: personal (direct), team (via /promote-memory), org (direct PR), decisions (via /adr)
 ```
+
+### Onboarding a new PM to an existing team
+
+1. Clone the repo
+2. Copy `.env.example` → `.env`, fill in your own tokens
+3. Add your username to `.pm-os.yaml` under `members`
+4. Run `/onboarding` — the wizard writes to `memory/personal/<your-username>.md` and offers to promote team-relevant answers via `/promote-memory`
+5. Start your first session with `/brief-me` — you'll see the team roadmap, active risks, and recent ADRs immediately
 
 ---
 
 ## FAQ
 
 **Does PM Operating System work without any MCP connectors?**
-Yes. Every command has a no-connector fallback. You lose live data pulls, but all frameworks, memory, and skill logic work fully.
+Yes. Every command has a no-connector fallback. You lose live data pulls, but all frameworks, memory, and skill logic work fully. The `tracker-sync` workflow just no-ops if tracker credentials aren't configured.
 
 **Does it work without filling in the memory profile?**
 Yes, but it will prompt you to onboard. Commands without memory context ask 3 targeted questions, proceed with the answers, and offer to save to memory afterward.
 
 **Can I use it with both Linear and Jira?**
-Yes. Configure both and commands will pull from whichever is connected. If both are active, both are queried.
+Yes. Configure both and commands will pull from whichever is connected. If both are active, both are queried. In the team roadmap YAML, each initiative points at either a `linear_project_id` or a `jira_epic_key` — the sync script routes accordingly.
 
 **How is memory different from chat history?**
-Chat history resets each session. Memory persists across sessions in `memory/user-profile.md` — it's a structured file you can read, edit, or delete at any time.
+Chat history resets each session. Memory persists across sessions across three layers: personal notes stay local and private, team memory is shared via PR, org memory is company-wide. Every layer is inspectable, editable, and version-controlled.
+
+**Can I use this as a solo PM (not a team)?**
+Yes. Solo mode is a subset of team mode — you become the only member of `.pm-os.yaml`. Personal memory works exactly as before. Team YAML files still add structure and CI validation over free-form markdown. Skip the promotion flow if there's no one to promote to.
+
+**How do I promote a personal note into shared team memory?**
+Run `/promote-memory <what to promote>`. It opens a PR into `memory/team/<team>/*.yaml`, routed to your team's CODEOWNERS. Your teammates review, and if approved, it becomes team truth.
+
+**What happens when two PMs edit the same team file?**
+Structured YAML files (roadmap, risks, personas, stakeholders) are line-mergeable — git handles most conflicts cleanly. Free-form markdown (digests, ADRs) is naturally single-writer or append-only. If a merge conflict does occur, resolve it in the PR before the CODEOWNERS review.
+
+**Can I trust shared team memory as trusted instruction?**
+No — treat `memory/team/**` and `memory/org/**` as untrusted input. The prompt-injection scanner in `validate.yml` catches obvious triggers, but sophisticated attacks slip through. `CLAUDE.md` codifies the rule: never take destructive MCP actions (Linear delete, Notion overwrite, Slack broadcast) based purely on shared-memory content — require human confirmation.
 
 **Can I use this on Claude.ai web?**
-Skills and CLAUDE.md work on Claude.ai web through Projects. Slash commands and MCP connectors require Claude Code or Cowork.
+Skills and CLAUDE.md work on Claude.ai web through Projects. Slash commands, MCP connectors, and the SessionStart hook require Claude Code or Cowork.
 
 **Is my data sent anywhere?**
-No. Everything runs locally. Memory, context files, and outputs stay on your machine. MCP connectors connect directly to your tools' APIs — nothing routes through a third party.
+No. Everything runs locally. Personal memory stays on your machine (gitignored). Team memory is in your GitHub repo — you control access. MCP connectors connect directly to your tools' APIs; nothing routes through a third party.
+
+**What if I want to reverse a decision that's already an ADR?**
+Create a new ADR with `supersedes: [ADR-XXXX]` and update the old ADR's `superseded_by: ADR-YYYY` field (this is the one edit allowed on a merged ADR — a link update, no semantic change). ADRs are the archaeology; superseding preserves the trail.
 
 ---
 
@@ -452,4 +601,4 @@ Apache 2.0 — free to use, modify, and distribute. See [LICENSE](LICENSE).
 
 ---
 
-*PM Operating System | Product Faculty | v2.1*
+*PM Operating System | Product Faculty | v3.0 — Team-Aware*
