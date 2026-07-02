@@ -1,23 +1,6 @@
-# The AI-Native PM Operating System
+# The PM Operating System
 
-### Plugin for Claude Code, Claude Cowork, Claude Desktop, and Claude.AI Web || Product Faculty
-
-Stop working like a 2022 PM. Start operating like an AI-native one — solo *or* as a team.
-
-PM Operating System is your AI Product Manager and an AI operating system for your product work. As of v3.0, it's team-aware: multiple PMs can share product context, roadmap state, and decisions through git — without last-writer-wins overwrites, without giving up personal notes.
-
-- **65+** embedded PM skills across 12 domains
-- **19** command-based workflows (end-to-end execution, not prompts)
-- **8** specialized sub-agents (discovery, strategy, GTM, metrics, etc.)
-- **Three-layer memory** — personal (private) / team (shared, PR-reviewed) / org (2-approval) — with immutable ADRs for durable decisions
-- **GitOps governance** — schemas, CODEOWNERS, CI validation, staleness reconciler, prompt-injection scanner
-- **Tracker sync** — hourly Linear/Jira → YAML for live roadmap state
-
-Every command pulls your full context, connects to your tools, and executes like a real operator.
-
-It's time to become a 100x Product Manager — and a 100x product *team*.
-
-Built by Product Faculty: We run [#1 AI PM Certification](https://maven.com/product-faculty/ai-product-management-certification?promoCode=git) — trusted by 3,000+ PMs (1,000+ reviews) learning how to build and operate AI-native products.
+### Plugin for Claude Code, Claude Cowork, Claude Desktop, and Claude.AI Web
 
 ---
 
@@ -134,9 +117,6 @@ Commands are chained workflows that wire multiple skills together into end-to-en
 | **`/promote-memory`** | **New in v3.0** — escalate a fact from your personal profile into shared team memory via PR |
 | **`/adr`** | **New in v3.0** — capture a durable product decision as an Architecture Decision Record, immutable once merged |
 
-### 65 PM Skills Across 12 Domains
-
-Skills are the atomic units of PM knowledge. Each skill lives in `skills/[name]/SKILL.md`, fires automatically when relevant, and can also be invoked directly. Every skill loads your layered memory context and routes writes to the right scope (personal / team via PR / org / ADR).
 
 | Domain | Skills | Key Frameworks |
 |---|---|---|
@@ -193,10 +173,6 @@ Connect once, and every command pulls live data from your actual stack:
 | **GitHub** | Issue backlog, PR velocity, engineering output | — |
 
 All connectors are optional. PM Operating System works fully without them — it just can't pull live data from your tools. Commands gracefully skip any connector that isn't configured.
-
-### Gossip Mode
-
-Speak informally — voice-to-text, stream-of-consciousness, "you won't believe what happened in standup" — and PM Operating System parses it into structured memory updates. It extracts stakeholder signals, roadmap changes, risks, decisions, and team dynamics, then routes each to the right scope (personal by default; offers `/promote-memory` for team-relevant items). Designed to complete in under 60 seconds.
 
 ---
 
@@ -275,7 +251,7 @@ For volatile data (velocity, this-sprint blockers), the session-start MCP query 
 
 ## Platform Guide
 
-PM Operating System runs on every Claude surface. Here's what to know for each.
+PM Operating System runs on every surface. Here's what to know for each.
 
 ### Claude Code (CLI)
 
@@ -595,10 +571,4 @@ Create a new ADR with `supersedes: [ADR-XXXX]` and update the old ADR's `superse
 
 ---
 
-## License
-
-Apache 2.0 — free to use, modify, and distribute. See [LICENSE](LICENSE).
-
----
-
-*PM Operating System | Product Faculty | v3.0 — Team-Aware*
+*Maintained by the Vista Equity Partners Product Practice. For questions, reach out to Elliott Landon via elandon@vistaequitypartners.com.*
