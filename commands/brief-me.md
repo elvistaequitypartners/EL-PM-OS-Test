@@ -18,7 +18,7 @@ If `$ARGUMENTS` is "brief", produce a shorter version (Step 8 compact format). O
 
 ## Step 1 — Load Full Memory
 
-Read `memory/user-profile.md`. This is the foundation of everything. Extract and hold in context:
+Read `memory/personal/${USER}.md`. This is the foundation of everything. Extract and hold in context:
 
 - **Product:** name, stage, core problem, business model
 - **Stack:** issue tracker, docs, comms, analytics — and which have MCP connectors
@@ -31,7 +31,7 @@ Read `memory/user-profile.md`. This is the foundation of everything. Extract and
 - **Lessons learned:** recent retro insights
 - **Decided & why:** recent decisions and their rationale
 
-If `memory/user-profile.md` doesn't exist or is empty:
+If `memory/personal/${USER}.md` doesn't exist or is empty:
 → Say: "I don't have any context about you or your product yet. Let's fix that — run `/onboarding` to set up your PM Operating System memory. It takes about 5 minutes and means I'll never ask you to re-brief me again."
 → Stop here. Don't proceed with a blank briefing.
 
@@ -179,7 +179,7 @@ If the user says yes, ask only about the specific gaps identified — don't re-r
 - Any new risks or resolved risks?
 - Any changes to stakeholders or team?
 
-Update `memory/user-profile.md` with the answers.
+Update `memory/personal/${USER}.md` with the answers.
 
 ## Step 8 — Compact Format (if "brief" was specified)
 

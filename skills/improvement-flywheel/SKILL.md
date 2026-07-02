@@ -12,7 +12,7 @@ Framework: Hamel Husain + Shreya Shankar (Building eval systems, 2025), kaizen p
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the AI feature and any existing eval setup. Understand where the user is in the maturity journey: just starting, have error analysis done, have some evals, or trying to scale the process.
+Read `memory/personal/${USER}.md` for the AI feature and any existing eval setup. Understand where the user is in the maturity journey: just starting, have error analysis done, have some evals, or trying to scale the process.
 
 ## Step 2 — The Flywheel Stages
 

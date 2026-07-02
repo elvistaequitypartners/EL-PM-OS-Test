@@ -12,7 +12,7 @@ Framework: Lean Startup (TAM/SAM/SOM), Lenny Rachitsky (PMF and market size), ve
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context (stage, segment, business model). Read `context/company/competitors.md` for competitive market context. If WebSearch is available, use it for market data where needed.
+Read `memory/personal/${USER}.md` for product context (stage, segment, business model). Read `context/company/competitors.md` for competitive market context. If WebSearch is available, use it for market data where needed.
 
 ## Step 2 — Definitions
 

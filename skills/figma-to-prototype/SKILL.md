@@ -12,7 +12,7 @@ Framework: Colin Matthews (AI prototyping guide), Cursor + v0 workflow.
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context and any existing tech stack information.
+Read `memory/personal/${USER}.md` for product context and any existing tech stack information.
 
 ## Step 2 — What You Need from Figma
 

@@ -14,7 +14,7 @@ Key principle from Matthews: "A PM can turn a PRD into a working prototype in un
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the product context (name, stage, target user). Read the PRD or feature description provided.
+Read `memory/personal/${USER}.md` for the product context (name, stage, target user). Read the PRD or feature description provided.
 
 ## Step 2 — Select the Right Tool
 

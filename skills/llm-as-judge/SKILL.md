@@ -12,7 +12,7 @@ Framework: Hamel Husain + Shreya Shankar (Building eval systems, 2025), Anthropi
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the AI feature being evaluated. Read the error analysis output if available to understand the failure categories to target.
+Read `memory/personal/${USER}.md` for the AI feature being evaluated. Read the error analysis output if available to understand the failure categories to target.
 
 ## Step 2 — When to Use LLM-as-Judge
 

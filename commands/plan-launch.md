@@ -19,7 +19,7 @@ If `$ARGUMENTS` is empty, ask: "What feature or product are you launching?"
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product context, stakeholders, comms tools, past launches
+- `memory/personal/${USER}.md` — product context, stakeholders, comms tools, past launches
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/product/personas.md` (fallback: `context/product/personas-template.md`)
 - `context/company/mission.md` (if it exists)
@@ -29,7 +29,7 @@ Check: is there a PRD for this feature? If yes, pull success metrics and positio
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, a launch plan still works. Ask:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, a launch plan still works. Ask:
 
 1. "What are you launching and who is it for?" (one sentence)
 2. "When is the target launch date?"
@@ -149,7 +149,7 @@ Write draft communications for each channel:
 
 Offer to:
 - Save the launch plan to `outputs/launch-plan-[feature]-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - Launch date and feature (→ `roadmap_state`)
   - Stakeholders involved (→ `stakeholders`)
   - Risks (→ `tracked_risks`)

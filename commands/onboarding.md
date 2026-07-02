@@ -6,7 +6,11 @@ allowed-tools: [Read, Write, Glob, Agent]
 
 # /onboarding
 
-You are running the PM Operating System onboarding wizard. Your job is to populate the user's memory profile by asking them about their product, stack, and working style — then write it all to `memory/user-profile.md`.
+You are running the PM Operating System onboarding wizard. Your job is to populate the user's **personal** memory profile at `memory/personal/${USER}.md` by asking them about their product, stack, and working style.
+
+`${USER}` resolves to the local-part of `git config user.email` (the part before the `@`). Compute it once at the start of the session and use throughout.
+
+Anything team-shared (roadmap, personas, stakeholders, risks) does NOT go into the personal profile — after onboarding, the wizard offers to promote team-relevant answers to `memory/team/${CURRENT_TEAM}/*.yaml` via `/promote-memory`.
 
 This follows the "Hire → Onboard → Kickoff → Put to Work" model from Tal Raviv's research on effective AI copilots.
 
@@ -71,15 +75,46 @@ Ask the following 10 questions, one at a time. Wait for the answer before asking
 
 ## Phase 3: Write the Profile
 
-After all 10 answers, synthesize them into `memory/user-profile.md`:
+After all 10 answers, split the material by scope:
 
-1. Read the current `memory/user-profile.md` to see what's already there
-2. Fill in every field that was answered
-3. Set `last_updated` to today's date
-4. For any question not answered, leave the placeholder comment intact
-5. Write the updated file back
+**Personal (write directly to `memory/personal/${USER}.md`):**
+- Working style (Q6, Q10) — preferences, things to avoid, verbosity, framework preferences
+- Biggest open question (Q9) — often personal at first, may promote later
+- Any tentative interpretations you want to keep private
 
-Confirm what was saved: "Here's what I've written to your memory profile: [summary of key fields]. This is what I'll load at the start of every session."
+Format the personal file as YAML frontmatter (schema: `memory/schemas/profile.schema.json`) plus free-form notes:
+
+```yaml
+---
+user: ${USER}
+last_updated: <today>
+role: <inferred from stakeholder answers>
+team: ${CURRENT_TEAM}
+current_focus: <from Q8, top item>
+working_style:
+  prd_format_preference: brief|standard|detailed
+  verbosity: terse|balanced|verbose
+  preferred_frameworks: [...]
+  avoid: [...]
+open_questions:
+  - question: <Q9>
+    raised: <today>
+---
+
+# Notes
+
+<free-form notes from Q1-Q3 that are more personal reflection than team fact>
+```
+
+**Team scope — offer promotion (do NOT write directly to `memory/team/**`):**
+- Product/stage/business model (Q1, Q2, Q4) → propose adding to `memory/org/mission.md` or `memory/team/${CURRENT_TEAM}/` narrative
+- Stakeholders (Q7) → propose adding to `memory/team/${CURRENT_TEAM}/stakeholders.yaml` via `/promote-memory`
+- Roadmap items (Q8) → propose adding to `memory/team/${CURRENT_TEAM}/roadmap.yaml` via `/promote-memory`
+- Core problem (Q3) → propose adding to `memory/team/${CURRENT_TEAM}/personas.yaml` as JTBD input
+
+For each team-scope item, ask: *"This looks team-relevant. Want me to open a PR to promote it, or keep it personal for now?"*
+
+Confirm what was saved: *"I've written your personal profile to `memory/personal/${USER}.md`. Team-relevant items are queued for promotion via `/promote-memory` — approve each one and I'll open the PRs."*
 
 ---
 

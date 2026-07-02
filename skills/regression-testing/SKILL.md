@@ -12,7 +12,7 @@ Framework: Hamel Husain + Shreya Shankar (Building eval systems, 2025), software
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the AI feature being protected. Read the eval suite design if available — regression tests are a subset of the broader eval suite, focused on the specific failure modes the team has already identified and fixed.
+Read `memory/personal/${USER}.md` for the AI feature being protected. Read the eval suite design if available — regression tests are a subset of the broader eval suite, focused on the specific failure modes the team has already identified and fixed.
 
 ## Step 2 — What Triggers a Regression?
 

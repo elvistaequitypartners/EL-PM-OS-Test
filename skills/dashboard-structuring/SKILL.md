@@ -12,7 +12,7 @@ Framework: Lenny Rachitsky (North Star + supporting metrics), Dave McClure (AARR
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for North Star, product stage, business model, and analytics tool. Read `context/company/analytics-baseline.md` for existing metric definitions and baselines.
+Read `memory/personal/${USER}.md` for North Star, product stage, business model, and analytics tool. Read `context/company/analytics-baseline.md` for existing metric definitions and baselines.
 
 ## Step 2 — Dashboard Design Principles
 

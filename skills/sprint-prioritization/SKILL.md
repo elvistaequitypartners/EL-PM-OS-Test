@@ -12,7 +12,7 @@ Frameworks: RICE scoring, Shape Up (appetite), OKR alignment, dependency analysi
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for roadmap state, current OKRs, and team context. Read `context/product/roadmap.md` for Now/Next lists. Pull Linear/Jira state if MCP is connected.
+Read `memory/personal/${USER}.md` for roadmap state, current OKRs, and team context. Read `context/product/roadmap.md` for Now/Next lists. Pull Linear/Jira state if MCP is connected.
 
 ## Step 2 — Establish Sprint Constraints
 

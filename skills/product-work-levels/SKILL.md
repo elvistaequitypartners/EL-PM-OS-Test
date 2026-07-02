@@ -12,7 +12,7 @@ Key principle: "Most execution problems are really strategy problems. Teams fix 
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage and current frustrations (if any are in the open questions or tracked risks sections). Read `context/product/roadmap.md` for current work.
+Read `memory/personal/${USER}.md` for product stage and current frustrations (if any are in the open questions or tracked risks sections). Read `context/product/roadmap.md` for current work.
 
 ## Step 2 — The Three Levels Explained
 

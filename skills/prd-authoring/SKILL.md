@@ -15,7 +15,7 @@ Key principle from Lenny: "The best PRDs are problem-oriented. They define the p
 ## Step 1 — Load Context
 
 Read in parallel:
-- `memory/user-profile.md` — PRD format preference (brief / detailed / bullet-heavy / narrative), product context, stakeholders
+- `memory/personal/${USER}.md` — PRD format preference (brief / detailed / bullet-heavy / narrative), product context, stakeholders
 - `context/product/personas.md` (fallback: template)
 - `context/product/roadmap.md` (fallback: template) — for OKR linkage and strategic fit
 - `context/company/analytics-baseline.md` — for realistic success metrics
@@ -86,4 +86,4 @@ Before outputting, verify:
 
 Offer to:
 1. Save to `outputs/prd-[feature-name]-[date].md`
-2. Update `memory/user-profile.md` with decisions made, open questions, and risks identified
+2. Update `memory/personal/${USER}.md` with decisions made, open questions, and risks identified

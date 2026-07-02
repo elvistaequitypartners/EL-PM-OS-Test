@@ -19,14 +19,14 @@ If `$ARGUMENTS` is empty, ask: "What AI feature are you designing? Describe the 
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product context, tech stack, AI maturity, current bets
+- `memory/personal/${USER}.md` — product context, tech stack, AI maturity, current bets
 - `context/product/personas.md` (fallback: `context/product/personas-template.md`)
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/analytics-baseline.md` (if it exists)
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, AI feature design still works — the feature description itself provides most of the needed context. Ask:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, AI feature design still works — the feature description itself provides most of the needed context. Ask:
 
 1. "What product is this for and who uses it?" (one sentence)
 2. "What's the expected volume — how many times per day will users trigger this AI feature?"
@@ -226,7 +226,7 @@ Produce:
 
 Offer to:
 - Save to `outputs/ai-feature-[name]-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - AI feature decisions (→ `decided_and_why`)
   - Eval baselines once established
   - Risks (→ `tracked_risks`)

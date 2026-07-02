@@ -79,7 +79,7 @@ If the user is debriefing a conversation they already had, extract:
 **Competitive hire insights:** Who were they "hiring" before? What did that hire fail to do?
 **Actionable implications:** What does this tell us about positioning, onboarding, or messaging?
 
-Compare findings against existing JTBD notes in `memory/user-profile.md`. Are patterns emerging?
+Compare findings against existing JTBD notes in `memory/personal/${USER}.md`. Are patterns emerging?
 
 ## Step 5 — Pattern Library
 

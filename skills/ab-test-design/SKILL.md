@@ -12,7 +12,7 @@ Framework: Statistical testing principles, Lenny Rachitsky's experimentation gui
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage (pre-PMF products usually shouldn't be running A/B tests — qualitative research is more efficient) and analytics tool. Read `context/company/analytics-baseline.md` for baseline metrics needed for sample size calculation.
+Read `memory/personal/${USER}.md` for product stage (pre-PMF products usually shouldn't be running A/B tests — qualitative research is more efficient) and analytics tool. Read `context/company/analytics-baseline.md` for baseline metrics needed for sample size calculation.
 
 **Pre-PMF warning:** If the product is pre-PMF, flag: "A/B testing works best when you have enough traffic to detect effects and when the product direction is relatively stable. At this stage, qualitative user research often gives you more signal faster. Still want to proceed?"
 

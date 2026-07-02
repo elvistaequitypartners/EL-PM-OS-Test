@@ -16,7 +16,7 @@ Key principle from Chennapragada: "If you're not prototyping with AI, you're doi
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the product being built and any existing prototype or spec. Read the PRD or feature description provided.
+Read `memory/personal/${USER}.md` for the product being built and any existing prototype or spec. Read the PRD or feature description provided.
 
 ## Step 2 — Tool Selection Guide
 

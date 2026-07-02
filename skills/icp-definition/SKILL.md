@@ -14,7 +14,7 @@ Key principle: The ICP is discovered, not invented. Look at your best existing c
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, business model, existing customer context. Read `context/product/personas.md` for existing persona definitions.
+Read `memory/personal/${USER}.md` for product stage, business model, existing customer context. Read `context/product/personas.md` for existing persona definitions.
 
 ## Step 2 — Analyze Best Existing Customers (if applicable)
 
@@ -94,4 +94,4 @@ Produce:
 - Anti-ICP profile
 - ICP scoring criteria for sales qualification
 - Top 3 signals that quickly identify an ICP customer in the field
-- Offer to update `context/product/personas.md` and `memory/user-profile.md` with ICP findings
+- Offer to update `context/product/personas.md` and `memory/personal/${USER}.md` with ICP findings

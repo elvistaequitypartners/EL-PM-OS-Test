@@ -12,7 +12,7 @@ Frameworks: Teresa Torres (problem vs. solution distinction), Marty Cagan (the r
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` and `context/product/personas.md` to ground the problem in the user's specific product and user segment.
+Read `memory/personal/${USER}.md` and `context/product/personas.md` to ground the problem in the user's specific product and user segment.
 
 ## Step 2 — Separate Problem from Solution
 

@@ -12,7 +12,7 @@ Framework: Lenny Rachitsky (feedback analysis methodology), frequency × severit
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context and current roadmap. Read `context/product/roadmap.md` to understand current priorities — strategic fit scoring depends on knowing what's already being worked on.
+Read `memory/personal/${USER}.md` for product context and current roadmap. Read `context/product/roadmap.md` to understand current priorities — strategic fit scoring depends on knowing what's already being worked on.
 
 ## Step 2 — Detect Input Format
 
@@ -92,4 +92,4 @@ Produce:
 - Suggested experiments
 - What to ignore section
 
-Offer to save to `outputs/feedback-analysis-[date].md` and update `memory/user-profile.md` with new insights.
+Offer to save to `outputs/feedback-analysis-[date].md` and update `memory/personal/${USER}.md` with new insights.

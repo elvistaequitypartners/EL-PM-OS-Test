@@ -12,7 +12,7 @@ Framework: Shape Up (small, vertically sliced bets), INVEST criteria (Independen
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context and team norms. Read the PRD or feature description provided.
+Read `memory/personal/${USER}.md` for product context and team norms. Read the PRD or feature description provided.
 
 ## Step 2 — Identify the Feature Boundaries
 

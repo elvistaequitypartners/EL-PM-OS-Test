@@ -12,7 +12,7 @@ Frameworks: April Dunford (positioning clarity), Lenny's PRD guide (problem-orie
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for: product name, stage, primary persona, current roadmap (to understand what just shipped), and stakeholder communication preferences. Read `context/product/personas.md` for tone calibration.
+Read `memory/personal/${USER}.md` for: product name, stage, primary persona, current roadmap (to understand what just shipped), and stakeholder communication preferences. Read `context/product/personas.md` for tone calibration.
 
 ## Step 2 — Frame the Announcement Around the Problem
 

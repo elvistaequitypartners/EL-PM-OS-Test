@@ -12,7 +12,7 @@ Framework: Service design principles, Teresa Torres (continuous discovery touchp
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` and `context/product/personas.md` to identify the primary persona for this journey. Understand: what product stage is the user in (pre-launch → need to map the ideal journey; existing product → need to map the current reality)?
+Read `memory/personal/${USER}.md` and `context/product/personas.md` to identify the primary persona for this journey. Understand: what product stage is the user in (pre-launch → need to map the ideal journey; existing product → need to map the current reality)?
 
 ## Step 2 — Define the Journey Scope
 

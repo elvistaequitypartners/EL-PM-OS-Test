@@ -12,7 +12,7 @@ Key principle from Lenny: "Your North Star Metric is your strategy, and your str
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context, business model, and current bets. Read `context/company/analytics-baseline.md` for available metrics. Read `context/product/roadmap.md` for OKRs.
+Read `memory/personal/${USER}.md` for product context, business model, and current bets. Read `context/company/analytics-baseline.md` for available metrics. Read `context/product/roadmap.md` for OKRs.
 
 ## Step 2 — North Star Criteria
 
@@ -86,4 +86,4 @@ Current: ~1,200/week
 Target: 2,000/week by Q3
 ```
 
-Offer to save the NSM to `memory/user-profile.md` and update the roadmap OKR context.
+Offer to save the NSM to `memory/personal/${USER}.md` and update the roadmap OKR context.

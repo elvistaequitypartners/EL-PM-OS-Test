@@ -19,7 +19,7 @@ If `$ARGUMENTS` is "full setup", run the complete framework. If a specific area 
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product stage, business model, current metrics, OKRs
+- `memory/personal/${USER}.md` — product stage, business model, current metrics, OKRs
 - `context/company/analytics-baseline.md` (if it exists)
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/mission.md` (if it exists)
@@ -28,7 +28,7 @@ Key context: product stage determines which metrics matter most. A pre-PMF start
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or lacks product stage and business model, ask:
+If `memory/personal/${USER}.md` doesn't exist or lacks product stage and business model, ask:
 
 1. "What's your product and business model?" (SaaS / marketplace / consumer / usage-based / freemium)
 2. "What stage are you at?" (pre-PMF / early traction / growth / scale)
@@ -165,7 +165,7 @@ Produce:
 Offer to:
 - Save to `outputs/metrics-framework-[date].md`
 - Save dashboard specs to `context/company/analytics-baseline.md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - Chosen North Star (→ metrics context)
   - Key funnel baselines
   - Open questions about measurement

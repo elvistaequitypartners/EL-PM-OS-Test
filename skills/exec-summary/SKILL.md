@@ -14,7 +14,7 @@ Key principle from Lenny: "Great PMs take pride in clarity. They never make the 
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for: stakeholder context (who is this going to, their communication style and sensitivities), product context, and current initiative status.
+Read `memory/personal/${USER}.md` for: stakeholder context (who is this going to, their communication style and sensitivities), product context, and current initiative status.
 
 ## Step 2 — Identify the Point
 

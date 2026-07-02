@@ -52,7 +52,7 @@ Framework: Hamel Husain + Shreya Shankar methodology (open coding → axial codi
 
 When invoked, you receive an AI feature description, quality concern, or eval design request from the parent conversation.
 
-1. **Load context:** Read `memory/user-profile.md` for product stage, AI feature details, and analytics tools. Understand what the AI feature does and who uses it.
+1. **Load context:** Read `memory/personal/${USER}.md` for product stage, AI feature details, and analytics tools. Understand what the AI feature does and who uses it.
 2. **Identify the eval task:**
    - **Understanding failures** → Error analysis: open coding on failure examples → axial coding into taxonomy → severity classification
    - **Measuring quality** → Eval suite design: golden datasets, rubrics, automated scoring

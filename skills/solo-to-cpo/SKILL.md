@@ -12,7 +12,7 @@ Framework: Jackie Bavaro (Cracking the PM Career), Lenny Rachitsky (PM career su
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the user's current role context and product stage. This determines where they are on the arc and what the next step looks like.
+Read `memory/personal/${USER}.md` for the user's current role context and product stage. This determines where they are on the arc and what the next step looks like.
 
 ## Step 2 — The Arc
 

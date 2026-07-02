@@ -25,7 +25,7 @@ If no input is provided, ask: "Paste your research notes, provide file paths, or
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product context, personas, current bets, open questions
+- `memory/personal/${USER}.md` — product context, personas, current bets, open questions
 - `context/product/personas.md` (fallback: `context/product/personas-template.md`)
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/templates/research-synthesis-template.md` — output template
@@ -34,7 +34,7 @@ Note: existing open questions from memory that this research might answer.
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, do NOT stop. Research synthesis is one of the best entry points — the research itself provides context. Instead, ask:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, do NOT stop. Research synthesis is one of the best entry points — the research itself provides context. Instead, ask:
 
 1. "What product is this research for?" (one sentence)
 2. "Who are your target users?" (one sentence)
@@ -143,7 +143,7 @@ Fill in `context/templates/research-synthesis-template.md` with all findings.
 
 Offer to:
 - Save to `outputs/research-[study-name]-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - New opportunities (→ potential roadmap items in `roadmap_state`)
   - Open questions raised (→ `open_questions`)
   - Persona updates (→ update memory to note persona changes)

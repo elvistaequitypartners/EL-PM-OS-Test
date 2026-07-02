@@ -14,7 +14,7 @@ Key principle from Lenny/Porter: "Competing to be unique is ultimately more sust
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage and current bets. Read `context/company/competitors.md` if it exists. If not, proceed to research.
+Read `memory/personal/${USER}.md` for product stage and current bets. Read `context/company/competitors.md` if it exists. If not, proceed to research.
 
 ## Step 2 — Map the Competitive Landscape
 

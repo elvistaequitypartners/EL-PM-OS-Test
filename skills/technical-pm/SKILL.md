@@ -14,7 +14,7 @@ Key principle: A PM doesn't need to write production code. They need to understa
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the user's technical background, product domain (API-first vs. consumer vs. data platform vs. infrastructure), and current engineering team dynamics.
+Read `memory/personal/${USER}.md` for the user's technical background, product domain (API-first vs. consumer vs. data platform vs. infrastructure), and current engineering team dynamics.
 
 ## Step 2 — The Technical Credibility Spectrum
 

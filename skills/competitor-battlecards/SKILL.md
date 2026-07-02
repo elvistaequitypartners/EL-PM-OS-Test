@@ -12,7 +12,7 @@ Frameworks: April Dunford (Obviously Awesome — positioning against alternative
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context and current bets. Read `context/company/competitors.md` if it exists — use as a starting point. If WebSearch is available, research the specified competitor.
+Read `memory/personal/${USER}.md` for product context and current bets. Read `context/company/competitors.md` if it exists — use as a starting point. If WebSearch is available, research the specified competitor.
 
 ## Step 2 — Research the Competitor
 

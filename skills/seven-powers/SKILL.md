@@ -12,7 +12,7 @@ You are applying Hamilton Helmer's 7 Powers framework to evaluate which structur
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, business model, and current bets. Read `context/company/competitors.md` if it exists.
+Read `memory/personal/${USER}.md` for product stage, business model, and current bets. Read `context/company/competitors.md` if it exists.
 
 ## Step 2 — The 7 Powers Evaluated
 

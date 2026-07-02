@@ -22,14 +22,14 @@ The user has invoked this command with: `$ARGUMENTS`
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product context, current positioning, known competitors
+- `memory/personal/${USER}.md` — product context, current positioning, known competitors
 - `context/company/competitors.md` (if it exists — previous analysis)
 - `context/company/mission.md` (if it exists)
 - `context/product/personas.md` (fallback: `context/product/personas-template.md`)
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or has no competitive context, competitive intel is one of the best commands to run cold — WebSearch provides the context. Ask:
+If `memory/personal/${USER}.md` doesn't exist or has no competitive context, competitive intel is one of the best commands to run cold — WebSearch provides the context. Ask:
 
 1. "What does your product do?" (one sentence — needed to identify the competitive set)
 2. "Who do you think your main competitors are, if any?"
@@ -154,7 +154,7 @@ Based on the analysis:
 Offer to:
 - Save competitive analysis to `context/company/competitors.md` (canonical location)
 - Save battlecards to `outputs/battlecards-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - Key competitive insights (→ competitive context)
   - Risks from competitive moves (→ `tracked_risks`)
 

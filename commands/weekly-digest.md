@@ -19,13 +19,13 @@ If `$ARGUMENTS` has a date, generate the digest for the week ending on that date
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — roadmap state, OKRs, tracked risks, open questions, stakeholders
+- `memory/personal/${USER}.md` — roadmap state, OKRs, tracked risks, open questions, stakeholders
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/analytics-baseline.md` (if it exists)
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is sparse, AND no MCPs are connected, a weekly digest has nothing to pull from. Do NOT produce an empty digest. Instead:
+If `memory/personal/${USER}.md` doesn't exist or is sparse, AND no MCPs are connected, a weekly digest has nothing to pull from. Do NOT produce an empty digest. Instead:
 
 "I don't have enough context to generate your weekly digest automatically. Let's build it together:
 
@@ -170,7 +170,7 @@ OPEN QUESTIONS: [count] open, [count] resolved this week
 
 Offer to:
 - Save to `outputs/weekly-digest-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - Current roadmap state refreshed
   - Resolved risks removed
   - New risks added
