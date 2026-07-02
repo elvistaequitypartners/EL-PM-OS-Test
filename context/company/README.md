@@ -1,6 +1,6 @@
 # Company Context Directory
 
-Create these files to give PM Copilot your company-specific context. None are required — PM Copilot works with whatever you provide.
+Create these files to give PM Operating System your company-specific context. None are required — PM Operating System works with whatever you provide.
 
 ## Files to create
 
@@ -12,9 +12,9 @@ Key constraint: 12-month runway, shipping must generate revenue or retention sig
 Values: Build things users actually use; honesty over optimism in planning
 ```
 
-**`past-prds.md`** — Paste 2–3 previous PRDs here. PM Copilot will match your existing tone and level of detail when writing new ones.
+**`past-prds.md`** — Paste 2–3 previous PRDs here. PM Operating System will match your existing tone and level of detail when writing new ones.
 
-**`customer-feedback.md`** — Running log of feedback themes. PM Copilot uses this to calibrate opportunity sizing and avoid re-surfacing already-known issues.
+**`customer-feedback.md`** — Running log of feedback themes. PM Operating System uses this to calibrate opportunity sizing and avoid re-surfacing already-known issues.
 
 **`analytics-baseline.md`** — Your metric definitions and normal ranges. Example:
 ```

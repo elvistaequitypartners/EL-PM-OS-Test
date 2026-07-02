@@ -54,7 +54,7 @@ When to use:
 - You want to build a separate go-to-market motion
 
 Risk: Splits focus; dilutes brand; harder to sell.
-When it works: When the AI product has clear standalone value (like PM Copilot — it's a plugin that adds genuine PM capability, not just an AI wrapper on an existing feature).
+When it works: When the AI product has clear standalone value (like PM Operating System — it's a plugin that adds genuine PM capability, not just an AI wrapper on an existing feature).
 
 ## Step 3 — Variable Cost Analysis
 

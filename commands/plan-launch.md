@@ -35,7 +35,7 @@ If `memory/user-profile.md` doesn't exist or is nearly empty, a launch plan stil
 2. "When is the target launch date?"
 3. "Who needs to know — engineering, sales, customers, leadership?"
 
-Build the launch plan from these answers plus the feature details. After completing, offer: "Want me to save your stakeholder list and launch timeline to your PM Copilot memory?"
+Build the launch plan from these answers plus the feature details. After completing, offer: "Want me to save your stakeholder list and launch timeline to your PM Operating System memory?"
 
 ## Step 2 — Launch Tier Classification
 

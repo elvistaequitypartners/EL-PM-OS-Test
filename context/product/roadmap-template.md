@@ -1,7 +1,7 @@
 # Product Roadmap
 
 > Copy this file to `context/product/roadmap.md` and fill in your actual roadmap.
-> PM Copilot uses this to flag conflicts, check OKR alignment, and generate stakeholder views.
+> PM Operating System uses this to flag conflicts, check OKR alignment, and generate stakeholder views.
 
 last_updated: [YYYY-MM-DD]
 

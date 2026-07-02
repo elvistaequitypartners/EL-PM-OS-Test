@@ -78,7 +78,7 @@ The Founding PM role is uniquely high-stakes and high-growth. Specifics:
 - The test is: did the product ship? Did users care? Did the company survive?
 - The skill that matters most: judgment under ambiguity. There's no playbook.
 - What to prioritize: Get to PMF evidence. Every week that doesn't move toward PMF evidence is a week too long.
-- The accelerant: AI assistance (like PM Copilot) can function like having a senior PM peer — especially for frameworks and structure the Founding PM hasn't developed muscle memory for yet.
+- The accelerant: AI assistance (like PM Operating System) can function like having a senior PM peer — especially for frameworks and structure the Founding PM hasn't developed muscle memory for yet.
 
 ## Step 6 — Output
 

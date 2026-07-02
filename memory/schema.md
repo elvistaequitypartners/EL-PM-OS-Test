@@ -1,6 +1,6 @@
-# PM Copilot Memory Schema
+# PM Operating System Memory Schema
 
-This document defines the structure of `user-profile.md`. Every field is optional — PM Copilot works with whatever is filled in and grows the profile over time.
+This document defines the structure of `user-profile.md`. Every field is optional — PM Operating System works with whatever is filled in and grows the profile over time.
 
 ## Schema
 
@@ -27,7 +27,7 @@ code_repo:              # GitHub org/repo or GitLab
 prd_format_preference:  # brief / detailed / bullet-heavy / narrative
 verbosity:              # concise / standard / thorough
 preferred_frameworks:   # list: e.g. [JTBD, OST, Pyramid Principle]
-avoid:                  # things I don't want PM Copilot to do
+avoid:                  # things I don't want PM Operating System to do
 
 ## Stakeholders
 # Format per stakeholder:
@@ -57,13 +57,13 @@ decided_and_why:        # decisions made and rationale (key for future reference
 
 - `last_updated` must be set every time the profile is modified
 - `open_questions` should be resolved or escalated within 14 days
-- `tracked_risks` should be reviewed every 7 days (PM Copilot will prompt)
+- `tracked_risks` should be reviewed every 7 days (PM Operating System will prompt)
 - `lessons_learned` should be added after every shipped initiative
 - `roadmap_state` should reflect current reality, not plan — mark items complete when done
 
 ## What Gets Saved Automatically
 
-PM Copilot will offer to save the following to memory after each relevant session:
+PM Operating System will offer to save the following to memory after each relevant session:
 - PRD decisions (added to `decided_and_why`)
 - New stakeholders surfaced (added to `stakeholders`)
 - Risks identified (added to `tracked_risks`)

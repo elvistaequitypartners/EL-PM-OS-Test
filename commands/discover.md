@@ -34,7 +34,7 @@ If `memory/user-profile.md` doesn't exist or is nearly empty, do NOT stop. Disco
 1. "What product is this for and who uses it?" (one sentence)
 2. "What stage are you at — idea, pre-launch, early users, or scaling?"
 
-Proceed with the discovery cycle using the idea itself as primary context. After completing, offer: "This discovery cycle generated a lot of product context. Want me to save it to your PM Copilot memory?"
+Proceed with the discovery cycle using the idea itself as primary context. After completing, offer: "This discovery cycle generated a lot of product context. Want me to save it to your PM Operating System memory?"
 
 ## Step 2 — Problem Framing
 

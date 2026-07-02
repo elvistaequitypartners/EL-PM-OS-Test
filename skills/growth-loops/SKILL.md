@@ -26,19 +26,19 @@ Example: User creates a shareable PRD → shares on LinkedIn → peers see it an
 
 **Content loops:**
 Users generate or curate content → content is indexed → search brings new users → they become users and generate more content
-Example: PM shares their research synthesis publicly → Google indexes it → other PMs find it and discover PM Copilot
+Example: PM shares their research synthesis publicly → Google indexes it → other PMs find it and discover PM Operating System
 
 **Word of mouth loops (engineered):**
 User gets value → built-in mechanism prompts sharing → they share → referral drives new user
-Example: After a successful PRD, PM Copilot surfaces: "Your PRD looks great. Want to share it with your team or post it to LinkedIn?"
+Example: After a successful PRD, PM Operating System surfaces: "Your PRD looks great. Want to share it with your team or post it to LinkedIn?"
 
 **Integration loops:**
 User integrates product into their stack → other users in the same stack discover it → they request access
-Example: User connects PM Copilot to Linear → Linear ticket shows "Generated with PM Copilot" → other team members ask to use it
+Example: User connects PM Operating System to Linear → Linear ticket shows "Generated with PM Operating System" → other team members ask to use it
 
 **Product-led loops:**
 Users invite others to get more value → invited users also get value → they invite more users
-Example: Stakeholder receives PM Copilot-generated update → quality of update prompts them to ask for the tool → they become users
+Example: Stakeholder receives PM Operating System-generated update → quality of update prompts them to ask for the tool → they become users
 
 **Network effect loops:**
 Product gets better as more users join → better product attracts more users
@@ -76,7 +76,7 @@ Based on the ICP and product:
 - If PLG: what's the free-to-paid trigger? What in-product experience drives conversion?
 - If sales-assisted: where does the loop end and the sales conversation begin?
 
-For PM Copilot: PLG is the natural motion — users install the plugin themselves. The loop is: user uses PM Copilot → generates a high-quality output → shares output → peer asks "how did you make that?" → discovers and installs PM Copilot.
+For PM Operating System: PLG is the natural motion — users install the plugin themselves. The loop is: user uses PM Operating System → generates a high-quality output → shares output → peer asks "how did you make that?" → discovers and installs PM Operating System.
 
 ## Step 6 — Output
 

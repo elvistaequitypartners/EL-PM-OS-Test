@@ -104,7 +104,7 @@
 
 ## Memory Updates
 
-> PM Copilot will offer to save the following to your memory profile:
+> PM Operating System will offer to save the following to your memory profile:
 - New persona insights from this study
 - Top opportunities (add to roadmap consideration)
 - Open questions raised by this research

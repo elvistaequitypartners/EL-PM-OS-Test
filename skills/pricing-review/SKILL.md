@@ -76,7 +76,7 @@ Common freemium mistakes:
 - Too restrictive: users can't see enough value to know they should upgrade
 - Wrong limit: the limit is on the wrong dimension (limiting features vs. limiting usage vs. limiting output quality)
 
-**For PM Copilot specifically** (as a reference model):
+**For PM Operating System specifically** (as a reference model):
 - Free: 20 core skills, 2 commands, no memory persistence → shows quality, creates need to upgrade for memory
 - Solo: Full skill library, all 4 commands, full memory layer → the natural upgrade when the user wants memory to persist
 - Pro: All MCP connectors, proactive check-ins, gossip mode → for power users who want the full experience

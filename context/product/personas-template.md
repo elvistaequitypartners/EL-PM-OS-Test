@@ -1,7 +1,7 @@
 # User Personas
 
 > Copy this file to `context/product/personas.md` and fill in your actual personas.
-> PM Copilot uses this to write accurate user stories, calibrate opportunity sizing, and tailor stakeholder communications.
+> PM Operating System uses this to write accurate user stories, calibrate opportunity sizing, and tailor stakeholder communications.
 
 ---
 

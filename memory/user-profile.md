@@ -1,8 +1,8 @@
-# PM Copilot — User Memory Profile
+# PM Operating System — User Memory Profile
 
-> This file is your persistent PM context. PM Copilot reads it at the start of every session and offers to update it at the end. The more complete this is, the less you have to re-brief Claude each session.
+> This file is your persistent PM context. PM Operating System reads it at the start of every session and offers to update it at the end. The more complete this is, the less you have to re-brief Claude each session.
 >
-> To set this up, tell Claude "I want to set up PM Copilot" and it will walk you through the onboarding wizard.
+> To set this up, tell Claude "I want to set up PM Operating System" and it will walk you through the onboarding wizard.
 
 last_updated: <!-- fill in after setup -->
 

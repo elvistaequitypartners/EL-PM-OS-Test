@@ -27,7 +27,7 @@ For any product, but especially AI-powered products, segment users on these dime
 - **Conservative:** Adopts last; needs extensive proof and low switching cost
 - **Skeptic:** Actively resists; may become a user only under external pressure
 
-**AI-specific attitude (especially relevant for PM Copilot):**
+**AI-specific attitude (especially relevant for PM Operating System):**
 - **AI Embracer:** Excited; self-directed; builds habits quickly; tolerates setup friction
   - Onboarding: jump to advanced features; show full capability surface
   - Messaging: potential, speed, customization

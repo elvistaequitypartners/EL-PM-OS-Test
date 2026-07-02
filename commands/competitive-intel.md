@@ -34,7 +34,7 @@ If `memory/user-profile.md` doesn't exist or has no competitive context, competi
 1. "What does your product do?" (one sentence — needed to identify the competitive set)
 2. "Who do you think your main competitors are, if any?"
 
-If the user isn't sure about competitors, that's fine — use WebSearch to discover them. After completing, offer: "Want me to save this competitive landscape to your PM Copilot memory so it's available for future strategy reviews?"
+If the user isn't sure about competitors, that's fine — use WebSearch to discover them. After completing, offer: "Want me to save this competitive landscape to your PM Operating System memory so it's available for future strategy reviews?"
 
 ## Step 2 — Landscape Mapping
 

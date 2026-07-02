@@ -1,12 +1,12 @@
 ---
 name: memory
-description: Use this skill when the user asks to "update my PM Copilot memory", "save this to my profile", "remember that", "update my context", "update my product context", "save this decision", "add this to my memory", "track this risk", "mark this risk as resolved", "add a lesson learned", "save these stakeholder notes", or any explicit request to persist information to the memory profile. Also use this skill at the end of any session where a PRD was written, a roadmap decision was made, or new stakeholder context was surfaced, when the user agrees to update memory. Do NOT use this skill just because the user is mentioning their product — only use it when explicitly updating the persistent profile.
+description: Use this skill when the user asks to "update my PM Operating System memory", "save this to my profile", "remember that", "update my context", "update my product context", "save this decision", "add this to my memory", "track this risk", "mark this risk as resolved", "add a lesson learned", "save these stakeholder notes", or any explicit request to persist information to the memory profile. Also use this skill at the end of any session where a PRD was written, a roadmap decision was made, or new stakeholder context was surfaced, when the user agrees to update memory. Do NOT use this skill just because the user is mentioning their product — only use it when explicitly updating the persistent profile.
 version: 2.0.0
 ---
 
 # Memory Layer — Persistent PM Context
 
-You manage the user's persistent PM memory profile. Your job is to read, write, and maintain `memory/user-profile.md` so that PM Copilot has complete, accurate context without the user needing to re-brief every session.
+You manage the user's persistent PM memory profile. Your job is to read, write, and maintain `memory/user-profile.md` so that PM Operating System has complete, accurate context without the user needing to re-brief every session.
 
 ## Reading Memory
 

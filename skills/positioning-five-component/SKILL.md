@@ -97,7 +97,7 @@ The market category sets the expectations frame — it tells customers what your
 Three options:
 - **Existing category (e.g., "PM tool"):** Customers know what to expect. But you're compared to incumbents. Only use if you're genuinely the best in that category.
 - **New category (e.g., "AI-native PM operating system"):** You define the rules. But you have to educate customers on why this category exists. Best when you genuinely have no good comparison.
-- **Adjacent category (e.g., "the PM Copilot for Claude"):** Borrow legitimacy from an established category while differentiating. Good middle ground.
+- **Adjacent category (e.g., "the PM Operating System for Claude"):** Borrow legitimacy from an established category while differentiating. Good middle ground.
 
 **Output:** Recommended market category with rationale.
 

@@ -1,9 +1,9 @@
 {
-  "name": "pm-copilot",
-  "description": "The AI-native PM operating system — deep, framework-grounded PM skills with live MCP tool integrations, chained sub-agent workflows, and persistent user memory. Built for solo PMs and founding PMs who need an AI partner that actually knows their product.",
-  "version": "2.1.0",
+  "name": "pm-os",
+  "description": "AI-native PM operating system.",
+  "version": "1.0.0",
   "author": {
-    "name": "Product Faculty"
+    "name": "Vista Equity Partners"
   },
   "category": "productivity",
   "license": "Apache-2.0"
