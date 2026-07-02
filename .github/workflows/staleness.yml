@@ -1,0 +1,24 @@
+name: staleness
+
+on:
+  schedule:
+    - cron: "0 13 * * 1"    # every Monday 09:00 ET
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Find stale team/org memory and open issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          THRESHOLD_DAYS: "30"
+        run: python scripts/staleness_scan.py

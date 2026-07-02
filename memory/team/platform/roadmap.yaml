@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../schemas/roadmap.schema.json
+team: platform
+last_updated: 2026-07-02
+owner: elandon@vistaequitypartners.com
+
+now:
+  - id: INIT-0142
+    title: Team-shared memory rollout
+    strategic_bet: Shared context makes team PM decisions ~2x faster than solo re-briefings.
+    target_date: 2026-08-15
+    status: in-progress
+    owner: elandon@vistaequitypartners.com
+    adr_refs: [ADR-0001]
+
+next:
+  - id: INIT-0143
+    title: Skill/command refactor to layered memory loader
+    strategic_bet: Skills stay useful only if they consume the new memory layers uniformly.
+    target_date: 2026-09-15
+    status: planned
+    adr_refs: [ADR-0001]
+
+later:
+  - id: INIT-0144
+    title: Multi-team OS with cross-team promotion
+    strategic_bet: Cross-team promotion unlocks org-wide learning; premature until team scope is stable.
+    status: planned

@@ -1,0 +1,95 @@
+name: validate
+
+on:
+  pull_request:
+    paths:
+      - "memory/**"
+      - "context/**"
+  push:
+    branches: [main]
+    paths:
+      - "memory/**"
+      - "context/**"
+
+jobs:
+  schema:
+    name: JSON Schema validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install check-jsonschema
+      - name: Validate roadmap files
+        run: |
+          shopt -s nullglob
+          files=(memory/team/*/roadmap.yaml)
+          if [ ${#files[@]} -gt 0 ]; then
+            check-jsonschema --schemafile memory/schemas/roadmap.schema.json "${files[@]}"
+          else
+            echo "no roadmap.yaml files found — skipping"
+          fi
+        shell: bash
+      - name: Validate risks files
+        run: |
+          shopt -s nullglob
+          files=(memory/team/*/risks.yaml)
+          if [ ${#files[@]} -gt 0 ]; then
+            check-jsonschema --schemafile memory/schemas/risks.schema.json "${files[@]}"
+          fi
+        shell: bash
+      - name: Validate personas files
+        run: |
+          shopt -s nullglob
+          files=(memory/team/*/personas.yaml)
+          if [ ${#files[@]} -gt 0 ]; then
+            check-jsonschema --schemafile memory/schemas/personas.schema.json "${files[@]}"
+          fi
+        shell: bash
+      - name: Validate stakeholders files
+        run: |
+          shopt -s nullglob
+          files=(memory/team/*/stakeholders.yaml)
+          if [ ${#files[@]} -gt 0 ]; then
+            check-jsonschema --schemafile memory/schemas/stakeholders.schema.json "${files[@]}"
+          fi
+        shell: bash
+
+  markdown:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            memory/**/*.md
+            context/**/*.md
+        continue-on-error: true
+
+  injection-scan:
+    name: Prompt injection scanner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan shared memory for injection triggers
+        run: |
+          set -eu
+          patterns=(
+            "ignore (all |previous |above )?instructions"
+            "^system:"
+            "you are now"
+            "disregard (all |previous |above )?"
+            "<\|im_start\|>"
+            "\[\[SYSTEM\]\]"
+          )
+          hit=0
+          for p in "${patterns[@]}"; do
+            if grep -riE "$p" memory/team memory/org 2>/dev/null; then
+              echo "::error::injection pattern matched: $p"
+              hit=1
+            fi
+          done
+          exit $hit
+        shell: bash

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pm-os/schemas/personas.schema.json",
+  "title": "Personas",
+  "description": "User personas for the team's product surface. One file per team.",
+  "type": "object",
+  "required": ["team", "last_updated", "personas"],
+  "additionalProperties": false,
+  "properties": {
+    "team": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date" },
+    "personas": { "type": "array", "items": { "$ref": "#/definitions/persona" } }
+  },
+  "definitions": {
+    "persona": {
+      "type": "object",
+      "required": ["id", "name", "role", "jobs_to_be_done"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^PER-[0-9]{3}$" },
+        "name": { "type": "string" },
+        "role": { "type": "string", "description": "e.g. 'Data engineer at a Series-B SaaS'" },
+        "segment": { "type": "string" },
+        "jobs_to_be_done": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "pains": { "type": "array", "items": { "type": "string" } },
+        "gains": { "type": "array", "items": { "type": "string" } },
+        "current_tools": { "type": "array", "items": { "type": "string" } },
+        "evidence": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Links to interview notes, feedback tickets, or research docs."
+        }
+      }
+    }
+  }
+}

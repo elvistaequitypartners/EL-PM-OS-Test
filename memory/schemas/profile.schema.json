@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pm-os/schemas/profile.schema.json",
+  "title": "PM personal profile",
+  "description": "Per-PM personal memory. Lives at memory/personal/<user>.md as YAML frontmatter + free-form notes.",
+  "type": "object",
+  "required": ["user", "last_updated"],
+  "additionalProperties": false,
+  "properties": {
+    "user": {
+      "type": "string",
+      "description": "Local-part of the PM's git user.email (before the @)."
+    },
+    "last_updated": { "type": "string", "format": "date" },
+    "role": { "type": "string" },
+    "team": { "type": "string" },
+    "current_focus": { "type": "string" },
+    "working_style": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "prd_format_preference": {
+          "type": "string",
+          "enum": ["brief", "standard", "detailed"]
+        },
+        "verbosity": {
+          "type": "string",
+          "enum": ["terse", "balanced", "verbose"]
+        },
+        "preferred_frameworks": { "type": "array", "items": { "type": "string" } },
+        "avoid": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question", "raised"],
+        "properties": {
+          "question": { "type": "string" },
+          "raised": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form personal notes. Never surfaced outside the individual's session."
+    }
+  }
+}

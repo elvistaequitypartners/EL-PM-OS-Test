@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pm-os/schemas/risks.schema.json",
+  "title": "Risks",
+  "description": "Active risks tracked by the team. Each risk has a status; resolved risks move to /decisions or a digest.",
+  "type": "object",
+  "required": ["team", "last_updated", "risks"],
+  "additionalProperties": false,
+  "properties": {
+    "team": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date" },
+    "risks": { "type": "array", "items": { "$ref": "#/definitions/risk" } }
+  },
+  "definitions": {
+    "risk": {
+      "type": "object",
+      "required": ["id", "title", "severity", "likelihood", "status", "opened"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^RISK-[0-9]{4}$" },
+        "title": { "type": "string", "maxLength": 200 },
+        "description": { "type": "string" },
+        "severity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"]
+        },
+        "likelihood": {
+          "type": "string",
+          "enum": ["unlikely", "possible", "likely", "certain"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["open", "mitigating", "accepted", "resolved", "materialised"]
+        },
+        "owner": { "type": "string", "format": "email" },
+        "opened": { "type": "string", "format": "date" },
+        "review_by": { "type": "string", "format": "date" },
+        "related_initiatives": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^INIT-[0-9]{4}$" }
+        },
+        "mitigation": { "type": "string" }
+      }
+    }
+  }
+}

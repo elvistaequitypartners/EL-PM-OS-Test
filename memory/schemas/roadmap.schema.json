@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pm-os/schemas/roadmap.schema.json",
+  "title": "Roadmap",
+  "description": "Team roadmap — PM-owned strategy fields plus mirror-only tracker_* fields synced from Linear/Jira.",
+  "type": "object",
+  "required": ["team", "last_updated", "now", "next", "later"],
+  "additionalProperties": false,
+  "properties": {
+    "team": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date" },
+    "owner": { "type": "string", "format": "email" },
+    "now": { "type": "array", "items": { "$ref": "#/definitions/initiative" } },
+    "next": { "type": "array", "items": { "$ref": "#/definitions/initiative" } },
+    "later": { "type": "array", "items": { "$ref": "#/definitions/initiative" } }
+  },
+  "definitions": {
+    "initiative": {
+      "type": "object",
+      "required": ["id", "title", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^INIT-[0-9]{4}$",
+          "description": "PM-assigned initiative ID. Stable across tracker renames."
+        },
+        "title": { "type": "string", "maxLength": 120 },
+        "strategic_bet": {
+          "type": "string",
+          "description": "One-line hypothesis this initiative tests. Never in the tracker."
+        },
+        "hypothesis": { "type": "string" },
+        "target_date": { "type": "string", "format": "date" },
+        "status": {
+          "type": "string",
+          "enum": ["planned", "in-progress", "at-risk", "blocked", "shipped", "cancelled"]
+        },
+        "owner": {
+          "type": "string",
+          "description": "Engineering lead — mirrored from tracker",
+          "format": "email"
+        },
+        "linear_project_id": { "type": "string" },
+        "jira_epic_key": { "type": "string", "pattern": "^[A-Z]+-[0-9]+$" },
+        "notion_page_id": { "type": "string" },
+        "adr_refs": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^ADR-[0-9]{4}$" }
+        },
+        "tracker_status": {
+          "type": "string",
+          "description": "MIRROR from tracker — do not hand-edit. Overwritten by tracker-sync workflow.",
+          "enum": ["planned", "in-progress", "at-risk", "blocked", "shipped", "cancelled"]
+        },
+        "tracker_synced_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}
