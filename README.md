@@ -4,7 +4,7 @@
 
 Stop working like a 2022 PM. Start operating like an AI-native one.
 
-PM Copilot is your AI Product Manager and an AI operating system for your product work.
+PM Operating System is your AI Product Manager and an AI operating system for your product work.
 
 65+ embedded PM skills across 12 domains
 17 command-based workflows (end-to-end execution, not prompts)
@@ -62,11 +62,11 @@ claude plugin install https://github.com/yourorg/pm-aios
 1. Open Claude Desktop and switch to the **Cowork** tab
 2. Click **Customize** in the left sidebar
 3. Click **Browse plugins** or upload the plugin folder directly
-4. PM Copilot appears in your plugin list — click **Install**
+4. PM Operating System appears in your plugin list — click **Install**
 
 ### First Run
 
-On first run, PM Copilot launches the onboarding wizard automatically. It asks 10 questions about your product, stack, stakeholders, and working style — then writes your persistent memory profile. Takes about 5 minutes, and you never have to re-brief Claude again.
+On first run, PM Operating System launches the onboarding wizard automatically. It asks 10 questions about your product, stack, stakeholders, and working style — then writes your persistent memory profile. Takes about 5 minutes, and you never have to re-brief Claude again.
 
 You can also trigger it manually:
 
@@ -74,7 +74,7 @@ You can also trigger it manually:
 /onboarding
 ```
 
-Or just say: *"I want to set up PM Copilot"*
+Or just say: *"I want to set up PM Operating System"*
 
 ---
 
@@ -157,7 +157,7 @@ Sub-agents are isolated workers that handle complex, multi-step PM tasks. When a
 
 ### Persistent User Memory
 
-PM Copilot maintains a structured memory profile (`memory/user-profile.md`) that grows with every session. It stores:
+PM Operating System maintains a structured memory profile (`memory/user-profile.md`) that grows with every session. It stores:
 
 - **Product context** — name, stage, core user problem, business model, current bets
 - **Stack** — issue tracker, docs tool, comms tool, analytics tool, design tool
@@ -168,15 +168,15 @@ PM Copilot maintains a structured memory profile (`memory/user-profile.md`) that
 - **Tracked risks** — active risks with status (auto-prompted for review every 7 days)
 - **Lessons learned** — insights from retros, tied to specific initiatives
 
-**Session start protocol:** Every session, PM Copilot checks your memory for staleness (>7 days), aged open questions (>14 days), upcoming milestones (<7 days), and overdue roadmap items — then surfaces what needs attention before you even ask.
+**Session start protocol:** Every session, PM Operating System checks your memory for staleness (>7 days), aged open questions (>14 days), upcoming milestones (<7 days), and overdue roadmap items — then surfaces what needs attention before you even ask.
 
-**Session end protocol:** After any meaningful session (PRD written, roadmap decision made, risk surfaced), PM Copilot offers to update your memory so the next session starts with full context.
+**Session end protocol:** After any meaningful session (PRD written, roadmap decision made, risk surfaced), PM Operating System offers to update your memory so the next session starts with full context.
 
 ### Live Tool Connectors (MCP)
 
 Connect once, and every command pulls live data from your actual stack:
 
-| Tool | What PM Copilot reads | What PM Copilot writes |
+| Tool | What PM Operating System reads | What PM Operating System writes |
 |---|---|---|
 | **Linear** | Issues, roadmap state, sprint backlog, blockers | Tickets, status updates |
 | **Jira** | Board, backlog, sprint state, blockers | Issues, status updates |
@@ -184,17 +184,17 @@ Connect once, and every command pulls live data from your actual stack:
 | **Slack** | Channel context, thread sentiment, decisions, @mentions | Stakeholder updates |
 | **GitHub** | Issue backlog, PR velocity, engineering output | — |
 
-All connectors are optional. PM Copilot works fully without them — it just can't pull live data from your tools. Commands gracefully skip any connector that isn't configured.
+All connectors are optional. PM Operating System works fully without them — it just can't pull live data from your tools. Commands gracefully skip any connector that isn't configured.
 
 ### Gossip Mode
 
-Speak informally — voice-to-text, stream-of-consciousness, "you won't believe what happened in standup" — and PM Copilot parses it into structured memory updates. It extracts stakeholder signals, roadmap changes, risks, decisions, and team dynamics, then offers to save them. Designed to complete in under 60 seconds.
+Speak informally — voice-to-text, stream-of-consciousness, "you won't believe what happened in standup" — and PM Operating System parses it into structured memory updates. It extracts stakeholder signals, roadmap changes, risks, decisions, and team dynamics, then offers to save them. Designed to complete in under 60 seconds.
 
 ---
 
 ## Platform Guide
 
-PM Copilot runs on every Claude surface. Here's what to know for each.
+PM Operating System runs on every Claude surface. Here's what to know for each.
 
 ### Claude Code (CLI)
 
@@ -266,14 +266,14 @@ In Cowork, connectors are managed through the UI instead of `.mcp.json`:
 3. Search for and connect the tools you use: **Linear**, **Jira**, **Notion**, **Slack**, **GitHub**
 4. Authenticate through each connector's OAuth flow
 
-Once connected, PM Copilot commands automatically pull live data from your tools — no environment variables or config files needed.
+Once connected, PM Operating System commands automatically pull live data from your tools — no environment variables or config files needed.
 
 ---
 
 ## Project Structure
 
 ```
-pm-copilot/
+pm-os/
 ├── .claude-plugin/
 │   └── plugin.json              # Plugin manifest (name, version, metadata only)
 ├── .mcp.json                    # MCP server config (Claude Code only)
@@ -367,7 +367,7 @@ pm-copilot/
 
 ## Frameworks Embedded
 
-PM Copilot encodes the reasoning processes of the PM field's best practitioners. Every skill cites its source and applies the framework's actual methodology — not a surface-level summary.
+PM Operating System encodes the reasoning processes of the PM field's best practitioners. Every skill cites its source and applies the framework's actual methodology — not a surface-level summary.
 
 | Practitioner | Frameworks | Used In |
 |---|---|---|
@@ -389,7 +389,7 @@ PM Copilot encodes the reasoning processes of the PM field's best practitioners.
 
 ### Adding Your Context
 
-The more context you provide, the better PM Copilot performs. Fill in the files under `context/`:
+The more context you provide, the better PM Operating System performs. Fill in the files under `context/`:
 
 1. **`context/company/mission.md`** — Your company's mission, stage (pre-seed, seed, Series A, etc.), and core values. This calibrates all scoring and recommendations.
 2. **`context/company/competitors.md`** — Key competitors and how you differentiate. Feeds battlecard generation and positioning skills.
@@ -426,7 +426,7 @@ Your skill instructions here. Follow the pattern:
 
 ## FAQ
 
-**Does PM Copilot work without any MCP connectors?**
+**Does PM Operating System work without any MCP connectors?**
 Yes. Every command has a no-connector fallback. You lose live data pulls, but all frameworks, memory, and skill logic work fully.
 
 **Does it work without filling in the memory profile?**
@@ -452,4 +452,4 @@ Apache 2.0 — free to use, modify, and distribute. See [LICENSE](LICENSE).
 
 ---
 
-*PM Copilot | Product Faculty | v2.1*
+*PM Operating System | Product Faculty | v2.1*

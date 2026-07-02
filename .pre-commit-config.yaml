@@ -1,0 +1,36 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+        args: ["--maxkb=500"]
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.29.0
+    hooks:
+      - id: check-jsonschema
+        name: Validate roadmap YAML
+        files: ^memory/team/.+/roadmap\.yaml$
+        args: [--schemafile, memory/schemas/roadmap.schema.json]
+      - id: check-jsonschema
+        name: Validate risks YAML
+        files: ^memory/team/.+/risks\.yaml$
+        args: [--schemafile, memory/schemas/risks.schema.json]
+      - id: check-jsonschema
+        name: Validate personas YAML
+        files: ^memory/team/.+/personas\.yaml$
+        args: [--schemafile, memory/schemas/personas.schema.json]
+      - id: check-jsonschema
+        name: Validate stakeholders YAML
+        files: ^memory/team/.+/stakeholders\.yaml$
+        args: [--schemafile, memory/schemas/stakeholders.schema.json]
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.13.0
+    hooks:
+      - id: markdownlint-cli2
+        files: ^(memory|context)/.+\.md$

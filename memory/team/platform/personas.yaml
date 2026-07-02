@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=../../schemas/personas.schema.json
+team: platform
+last_updated: 2026-07-02
+
+personas:
+  - id: PER-001
+    name: Solo Founding PM
+    role: First PM at a Series A / B startup
+    segment: early-stage-b2b
+    jobs_to_be_done:
+      - Onboard AI as a persistent PM partner across sessions
+      - Avoid re-briefing every session
+      - Capture decisions and lessons for future me
+    pains:
+      - Context evaporates between sessions
+      - No teammates to consult on strategy trade-offs
+      - Tool-chain sprawl (Linear, Notion, Slack, Figma) makes memory hard
+    gains:
+      - Ambient rigour without hiring a strategy consultant
+      - Templates that encode proven frameworks (JTBD, OST, 7 Powers)
+    current_tools: [Linear, Notion, Slack, Figma, GitHub]
+    evidence: []
+
+  - id: PER-002
+    name: PM Team Lead
+    role: Head of Product at a Series B/C startup with 3-8 PMs
+    segment: growth-stage-b2b
+    jobs_to_be_done:
+      - Share product context across the PM guild
+      - Enforce decision hygiene (ADRs, RICE, roadmap discipline)
+      - Onboard new PMs faster
+    pains:
+      - Each PM has different context in their AI sessions
+      - No shared audit trail for why decisions were made
+      - Roadmap drift between planning docs and Linear reality
+    gains:
+      - Team-wide memory as a knowledge asset
+      - Consistent framework application across PMs
+    current_tools: [Linear, Notion, Slack, GitHub]
+    evidence: []

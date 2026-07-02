@@ -38,7 +38,7 @@ If `memory/user-profile.md` doesn't exist or is nearly empty, feedback triage st
 1. "What product is this feedback about?" (one sentence)
 2. "What are you focused on building right now?" (so strategic fit can be assessed)
 
-Score strategic fit based on the answer. After completing, offer: "This triage surfaced a lot about your users and product. Want me to save the top pain points and persona signals to your PM Copilot memory?"
+Score strategic fit based on the answer. After completing, offer: "This triage surfaced a lot about your users and product. Want me to save the top pain points and persona signals to your PM Operating System memory?"
 
 ## Step 2 — Input Detection & Normalization
 

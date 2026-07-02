@@ -1,0 +1,22 @@
+# PM Operating System repo config
+# Read by .claude/hooks/session-start.sh and by skills that resolve team scope.
+# Committed to git — this is team metadata, not per-user config.
+
+# The team scope this repo represents. Skills load memory/team/<team>/*
+# at session start. Override per-session with the PM_TEAM environment
+# variable.
+team: platform
+
+# Users mapped to this team. Personal memory lives in
+# memory/personal/<user>.md — matched by the local part of the git
+# user.email (before the @) or the $USER env var.
+members:
+  - elandon
+  # add teammates here as they onboard
+
+# Which trackers this team uses. Consumed by scripts/sync_trackers.py
+# to decide which MCP servers to call.
+trackers:
+  linear: true
+  jira: false
+  notion: true

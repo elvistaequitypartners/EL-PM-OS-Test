@@ -32,7 +32,7 @@ Read `memory/user-profile.md`. This is the foundation of everything. Extract and
 - **Decided & why:** recent decisions and their rationale
 
 If `memory/user-profile.md` doesn't exist or is empty:
-→ Say: "I don't have any context about you or your product yet. Let's fix that — run `/onboarding` to set up your PM Copilot memory. It takes about 5 minutes and means I'll never ask you to re-brief me again."
+→ Say: "I don't have any context about you or your product yet. Let's fix that — run `/onboarding` to set up your PM Operating System memory. It takes about 5 minutes and means I'll never ask you to re-brief me again."
 → Stop here. Don't proceed with a blank briefing.
 
 ## Step 2 — Staleness Check
@@ -208,7 +208,7 @@ START HERE: /[recommended command] — [why]
 
 If memory exists but is sparse (fewer than 3 sections filled in), don't produce an empty briefing. Instead:
 
-"Your PM Copilot memory is pretty light — I don't have enough context to give you a useful briefing yet. Let's fill in the gaps:
+"Your PM Operating System memory is pretty light — I don't have enough context to give you a useful briefing yet. Let's fill in the gaps:
 
 1. **Quick option:** Tell me in 2–3 sentences what you're working on right now, and I'll work with that for today.
 2. **Full option:** Run `/onboarding` to set up your complete profile (5 minutes, one-time).

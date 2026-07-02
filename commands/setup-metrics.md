@@ -34,7 +34,7 @@ If `memory/user-profile.md` doesn't exist or lacks product stage and business mo
 2. "What stage are you at?" (pre-PMF / early traction / growth / scale)
 3. "What metrics do you currently track, if any?"
 
-These three answers determine the entire metrics framework recommendation. After completing, offer: "Want me to save your North Star metric and funnel baselines to your PM Copilot memory?"
+These three answers determine the entire metrics framework recommendation. After completing, offer: "Want me to save your North Star metric and funnel baselines to your PM Operating System memory?"
 
 ## Step 2 — North Star Selection
 

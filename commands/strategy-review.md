@@ -35,7 +35,7 @@ If `memory/user-profile.md` doesn't exist or is nearly empty, a strategy review 
 2. "Who are your top 2–3 competitors or alternatives?"
 3. "What's your primary bet right now — the one thing you're investing most in?"
 
-Use WebSearch to supplement competitive context if the user doesn't have `competitors.md`. After completing, offer: "This review generated a lot of strategic context. Want me to save the positioning, competitive landscape, and moat assessment to your PM Copilot memory?"
+Use WebSearch to supplement competitive context if the user doesn't have `competitors.md`. After completing, offer: "This review generated a lot of strategic context. Want me to save the positioning, competitive landscape, and moat assessment to your PM Operating System memory?"
 
 ## Step 2 — Strategy Stack Audit (Shreyas Doshi)
 

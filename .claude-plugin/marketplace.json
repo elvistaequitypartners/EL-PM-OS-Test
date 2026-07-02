@@ -1,16 +1,16 @@
 {
-  "name": "pm-copilot",
+  "name": "pm-os",
   "owner": {
-    "name": "Product Faculty"
+    "name": "Vista Equity Partners"
   },
   "plugins": [
     {
-      "name": "pm-copilot",
+      "name": "pm-os",
       "source": "./",
-      "description": "The AI-native PM operating system — deep, framework-grounded PM skills with live MCP tool integrations, chained sub-agent workflows, and persistent user memory.",
-      "version": "2.1.0",
+      "description": "AI-native PM operating system.",
+      "version": "1.0.0",
       "author": {
-        "name": "Product Faculty"
+        "name": "Vista Equity Partners"
       },
       "category": "productivity",
       "license": "Apache-2.0"

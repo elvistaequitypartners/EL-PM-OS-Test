@@ -1,0 +1,36 @@
+# PM Operating System — code ownership
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Order matters: last matching rule wins. Broadest patterns first.
+
+*                                   @pm-os-maintainers
+
+# Personal notes — gitignored, but if ever committed accidentally,
+# only the author reviews. In practice this file rule is defensive.
+memory/personal/*                   @pm-os-maintainers
+
+# Team memory — any team PM can review
+memory/team/**                      @vista-pm-guild
+
+# Org memory — head of product + product ops together
+memory/org/**                       @head-of-product @product-ops
+
+# Decisions — head of product owns the log
+memory/decisions/**                 @head-of-product
+
+# Schemas — changes here affect every PM, gate carefully
+memory/schemas/**                   @pm-os-maintainers
+
+# Skills, commands, agents — repo maintainers only
+skills/**                           @pm-os-maintainers
+commands/**                         @pm-os-maintainers
+agents/**                           @pm-os-maintainers
+
+# Plugin + MCP config — infrastructure, protect it
+.claude-plugin/**                   @pm-os-maintainers
+.mcp.json                           @pm-os-maintainers
+.claude/**                          @pm-os-maintainers
+
+# CI + governance — protect the meta
+.github/**                          @pm-os-maintainers
+scripts/**                          @pm-os-maintainers

@@ -50,7 +50,7 @@ For each persona, identify their position:
 **AI Skeptic / Cautious:**
 - Trusts proven frameworks; fears losing craft or voice; needs to see before committing
 - Onboarding: lead with framework credibility; show sample outputs first; emphasize they stay in control
-- Messaging: "PM Copilot uses Teresa Torres and Marty Cagan's frameworks — not guesswork."
+- Messaging: "PM Operating System uses Teresa Torres and Marty Cagan's frameworks — not guesswork."
 
 **AI Neutral:**
 - Pragmatic; will use AI if it saves time; skeptical of hype

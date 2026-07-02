@@ -34,7 +34,7 @@ If `memory/user-profile.md` doesn't exist or is sparse, AND no original PRD/disc
 2. "What metrics were you hoping to move?"
 3. "What did you expect to happen vs. what actually happened?"
 
-Build the retro from these answers. The assumption audit becomes "what did we believe going in?" based on their recollection. After completing, offer: "This retro generated valuable lessons. Want me to save them to your PM Copilot memory so they inform future bets?"
+Build the retro from these answers. The assumption audit becomes "what did we believe going in?" based on their recollection. After completing, offer: "This retro generated valuable lessons. Want me to save them to your PM Operating System memory so they inform future bets?"
 
 If memory exists but the original PRD is missing, note: "I couldn't find the original PRD for this feature — the outcome comparison is based on your recollection. Next time, use `/write-prd` so I have predictions to compare against."
 

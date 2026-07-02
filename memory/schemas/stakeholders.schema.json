@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://pm-os/schemas/stakeholders.schema.json",
+  "title": "Stakeholders",
+  "description": "Internal stakeholders relevant to this team's roadmap. Excludes end-users (see personas).",
+  "type": "object",
+  "required": ["team", "last_updated", "stakeholders"],
+  "additionalProperties": false,
+  "properties": {
+    "team": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date" },
+    "stakeholders": { "type": "array", "items": { "$ref": "#/definitions/stakeholder" } }
+  },
+  "definitions": {
+    "stakeholder": {
+      "type": "object",
+      "required": ["email", "role", "influence"],
+      "additionalProperties": false,
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "team": { "type": "string" },
+        "influence": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "veto"],
+          "description": "Influence on this team's roadmap decisions."
+        },
+        "comms_style": {
+          "type": "string",
+          "enum": ["exec-brief", "narrative", "data-first", "async-doc"]
+        },
+        "cadence": {
+          "type": "string",
+          "description": "How often we sync — e.g. 'weekly 1:1', 'monthly review', 'ad-hoc'"
+        },
+        "sensitivities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Topics to handle with care. Kept factual, not personal."
+        }
+      }
+    }
+  }
+}

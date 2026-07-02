@@ -39,7 +39,7 @@ If `memory/user-profile.md` doesn't exist or is nearly empty, do NOT stop. Resea
 1. "What product is this research for?" (one sentence)
 2. "Who are your target users?" (one sentence)
 
-Proceed with the synthesis. The themes and opportunities you extract will naturally build product context. After completing, offer: "This research gave me a lot of context about your product and users. Want me to save it to your PM Copilot memory?"
+Proceed with the synthesis. The themes and opportunities you extract will naturally build product context. After completing, offer: "This research gave me a lot of context about your product and users. Want me to save it to your PM Operating System memory?"
 
 ## Step 2 — Pull Research Input
 

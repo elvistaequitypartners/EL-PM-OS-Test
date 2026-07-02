@@ -34,7 +34,7 @@ If `memory/user-profile.md` doesn't exist or lacks OKRs and strategy context, as
 2. "What's the one outcome that matters most to your team this quarter?"
 3. "Did you have OKRs last period? If yes, how did they go?"
 
-These three answers provide enough to structure meaningful OKRs. After completing, offer: "Want me to save these OKRs and your strategy context to your PM Copilot memory?"
+These three answers provide enough to structure meaningful OKRs. After completing, offer: "Want me to save these OKRs and your strategy context to your PM Operating System memory?"
 
 ## Step 2 — Last Period Review
 

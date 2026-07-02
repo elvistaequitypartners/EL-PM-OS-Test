@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../../schemas/risks.schema.json
+team: platform
+last_updated: 2026-07-02
+
+risks:
+  - id: RISK-0001
+    title: Skill refactor lag creates coexistence period with two memory models
+    description: >
+      Until every skill in skills/** consumes the new layered loader, the
+      old single-file protocol (memory/user-profile.md) and the new
+      three-layer protocol will coexist. PMs may see stale or duplicated
+      context depending on which skill they invoke.
+    severity: medium
+    likelihood: likely
+    status: mitigating
+    owner: elandon@vistaequitypartners.com
+    opened: 2026-07-02
+    review_by: 2026-08-01
+    related_initiatives: [INIT-0142, INIT-0143]
+    mitigation: >
+      Ship INIT-0143 (skill refactor) within 4 weeks of INIT-0142 merging.
+      During coexistence, CLAUDE.md documents the fallback clearly.
+
+  - id: RISK-0002
+    title: Shared markdown files become prompt-injection vectors
+    description: >
+      OWASP LLM Agentic memory-poisoning: any teammate can commit content
+      to memory/team/** or memory/org/** that gets loaded as trusted
+      context in another PM's session.
+    severity: high
+    likelihood: possible
+    status: mitigating
+    owner: elandon@vistaequitypartners.com
+    opened: 2026-07-02
+    related_initiatives: [INIT-0142]
+    mitigation: >
+      injection-scan CI job blocks obvious triggers; policy: PM Operating
+      System never takes destructive MCP actions (Linear delete, Notion
+      overwrite) based purely on shared-memory content.

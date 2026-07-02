@@ -1,6 +1,6 @@
 # Context Directory
 
-This directory holds your product and company context. PM Copilot reads these files before every skill and command execution to ground output in your specific situation.
+This directory holds your product and company context. PM Operating System reads these files before every skill and command execution to ground output in your specific situation.
 
 ## Structure
 
@@ -30,4 +30,4 @@ context/
 2. Copy `context/product/roadmap-template.md` → `context/product/roadmap.md` and fill it in
 3. Create `context/company/mission.md` with your company stage and direction
 
-PM Copilot will use templates as fallbacks if the filled-in files don't exist yet.
+PM Operating System will use templates as fallbacks if the filled-in files don't exist yet.

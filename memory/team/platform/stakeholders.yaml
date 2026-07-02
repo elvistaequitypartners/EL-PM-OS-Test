@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../../schemas/stakeholders.schema.json
+team: platform
+last_updated: 2026-07-02
+
+stakeholders: []
+# Add stakeholders here as they become relevant. Example:
+#
+#   - email: cto@example.com
+#     name: Jane Doe
+#     role: CTO
+#     team: engineering
+#     influence: high
+#     comms_style: exec-brief
+#     cadence: weekly 1:1
+#     sensitivities:
+#       - technical debt framing must be neutral

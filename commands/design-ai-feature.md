@@ -31,7 +31,7 @@ If `memory/user-profile.md` doesn't exist or is nearly empty, AI feature design 
 1. "What product is this for and who uses it?" (one sentence)
 2. "What's the expected volume — how many times per day will users trigger this AI feature?"
 
-Proceed with the design. After completing, offer: "Want me to save your product context and AI architecture decisions to your PM Copilot memory?"
+Proceed with the design. After completing, offer: "Want me to save your product context and AI architecture decisions to your PM Operating System memory?"
 
 ## Step 2 — Problem Validation for AI
 
