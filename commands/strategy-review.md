@@ -19,7 +19,7 @@ If `$ARGUMENTS` is empty, run a full strategic review of the product. If a speci
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product stage, current bets, OKRs, decided_and_why
+- `memory/personal/${USER}.md` — product stage, current bets, OKRs, decided_and_why
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/mission.md` (if it exists)
 - `context/company/competitors.md` (if it exists)
@@ -29,7 +29,7 @@ From memory, identify: What strategic decisions have already been made? What's t
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, a strategy review still works — but needs minimum context. Ask:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, a strategy review still works — but needs minimum context. Ask:
 
 1. "What does your product do and who is it for?" (one sentence)
 2. "Who are your top 2–3 competitors or alternatives?"
@@ -142,7 +142,7 @@ Based on the full review, produce:
 
 Offer to:
 - Save the strategy review to `outputs/strategy-review-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - Strategic decisions made (→ `decided_and_why`)
   - Risks from pre-mortem (→ `tracked_risks`)
   - Open strategic questions (→ `open_questions`)

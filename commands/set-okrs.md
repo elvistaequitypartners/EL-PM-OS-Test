@@ -19,7 +19,7 @@ If `$ARGUMENTS` names a planning period (e.g., "Q2 2025"), set OKRs for that per
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — current OKRs, product stage, roadmap state, North Star metric
+- `memory/personal/${USER}.md` — current OKRs, product stage, roadmap state, North Star metric
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/mission.md` (if it exists)
 - `context/company/analytics-baseline.md` (if it exists)
@@ -28,7 +28,7 @@ Check: what were last period's OKRs? How did they perform? (Pull from memory or 
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or lacks OKRs and strategy context, ask:
+If `memory/personal/${USER}.md` doesn't exist or lacks OKRs and strategy context, ask:
 
 1. "What does your product do and what stage is it at?"
 2. "What's the one outcome that matters most to your team this quarter?"
@@ -147,7 +147,7 @@ Objective: [Inspiring outcome statement]
 
 Offer to:
 - Save OKRs to `outputs/okrs-[period]-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - New OKRs for the period
   - Strategy alignment notes
   - Open questions about measurement

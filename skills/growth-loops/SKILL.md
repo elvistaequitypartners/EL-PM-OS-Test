@@ -14,7 +14,7 @@ Key insight: Funnels leak. Loops compound. A product with a strong growth loop d
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, business model, and current bets. Read `context/product/personas.md` for user type and behavior patterns.
+Read `memory/personal/${USER}.md` for product stage, business model, and current bets. Read `context/product/personas.md` for user type and behavior patterns.
 
 ## Step 2 — Growth Loop Types
 

@@ -17,7 +17,7 @@ If `$ARGUMENTS` is empty, ask: "What feature or idea would you like a PRD for?"
 ## Step 1 — Load Memory & Context
 
 Read the following in parallel:
-- `memory/user-profile.md` — persistent PM context (product name, stage, stakeholders, preferred PRD format, roadmap state)
+- `memory/personal/${USER}.md` — persistent PM context (product name, stage, stakeholders, preferred PRD format, roadmap state)
 - `context/product/personas.md` (fallback: `context/product/personas-template.md`)
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/mission.md` (if it exists)
@@ -28,7 +28,7 @@ Apply memory: if `prd_format_preference` is "brief", keep each section concise; 
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, do NOT stop or redirect to onboarding. Instead, ask 3 quick questions to gather minimum viable context:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, do NOT stop or redirect to onboarding. Instead, ask 3 quick questions to gather minimum viable context:
 
 1. "What's the product and who uses it?" (one sentence)
 2. "What stage are you at — idea, pre-launch, early users, or scaling?"
@@ -125,7 +125,7 @@ Add any concerns to Open Questions.
 
 After outputting the PRD:
 1. Offer to save it to `outputs/prd-[feature-name]-[date].md`
-2. Offer to update `memory/user-profile.md` with:
+2. Offer to update `memory/personal/${USER}.md` with:
    - Any decisions made during the PRD (→ `decided_and_why`)
    - Open questions (→ `open_questions`)
    - Any new stakeholders surfaced (→ `stakeholders`)

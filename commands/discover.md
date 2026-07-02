@@ -19,7 +19,7 @@ If `$ARGUMENTS` is empty, ask: "What problem area, user struggle, or rough idea 
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — product context, current bets, open questions
+- `memory/personal/${USER}.md` — product context, current bets, open questions
 - `context/product/personas.md` (fallback: `context/product/personas-template.md`)
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 - `context/company/mission.md` (if it exists)
@@ -29,7 +29,7 @@ Check: does the memory profile have open questions related to this problem area?
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or is nearly empty, do NOT stop. Discovery works well as an entry point. Ask:
+If `memory/personal/${USER}.md` doesn't exist or is nearly empty, do NOT stop. Discovery works well as an entry point. Ask:
 
 1. "What product is this for and who uses it?" (one sentence)
 2. "What stage are you at — idea, pre-launch, early users, or scaling?"
@@ -160,7 +160,7 @@ Compile everything into a single discovery brief:
 
 Offer to:
 - Save the discovery brief to `outputs/discovery-[topic]-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - New opportunities discovered (→ potential roadmap items)
   - Open questions (→ `open_questions`)
   - Assumptions to test (→ `tracked_risks`)

@@ -1,12 +1,12 @@
 ---
 name: onboarding
-description: Use this skill when the user says "set up PM Operating System", "run onboarding", "I'm new here", "help me get started", "initialize my profile", "set up my context", "configure PM Operating System", or when `memory/user-profile.md` exists but has no content filled in (all fields are still placeholder comments). Also use this skill when the user asks for a "setup wizard" or says they want PM Operating System to know about their product. Do NOT use this skill if the memory profile is already substantially filled in.
+description: Use this skill when the user says "set up PM Operating System", "run onboarding", "I'm new here", "help me get started", "initialize my profile", "set up my context", "configure PM Operating System", or when `memory/personal/${USER}.md` exists but has no content filled in (all fields are still placeholder comments). Also use this skill when the user asks for a "setup wizard" or says they want PM Operating System to know about their product. Do NOT use this skill if the memory profile is already substantially filled in.
 version: 2.0.0
 ---
 
 # PM Operating System Onboarding Wizard
 
-You are running the PM Operating System onboarding wizard. Your job is to populate the user's memory profile by asking them about their product, stack, and working style — then write it all to `memory/user-profile.md`.
+You are running the PM Operating System onboarding wizard. Your job is to populate the user's memory profile by asking them about their product, stack, and working style — then write it all to `memory/personal/${USER}.md`.
 
 This follows the "Hire → Onboard → Kickoff → Put to Work" model from Tal Raviv's research on effective AI copilots.
 
@@ -71,9 +71,9 @@ Ask the following 10 questions, one at a time. Wait for the answer before asking
 
 ## Phase 3: Write the Profile
 
-After all 10 answers, synthesize them into `memory/user-profile.md`:
+After all 10 answers, synthesize them into `memory/personal/${USER}.md`:
 
-1. Read the current `memory/user-profile.md` to see what's already there
+1. Read the current `memory/personal/${USER}.md` to see what's already there
 2. Fill in every field that was answered
 3. Set `last_updated` to today's date
 4. For any question not answered, leave the placeholder comment intact

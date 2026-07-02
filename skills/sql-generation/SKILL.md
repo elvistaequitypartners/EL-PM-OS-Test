@@ -10,7 +10,7 @@ You are generating SQL queries for product analytics use cases. The queries are 
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for analytics tool and any database or schema information the user has provided. Read `context/company/analytics-baseline.md` for metric definitions that should inform the query.
+Read `memory/personal/${USER}.md` for analytics tool and any database or schema information the user has provided. Read `context/company/analytics-baseline.md` for metric definitions that should inform the query.
 
 ## Step 2 — Clarify the Schema
 

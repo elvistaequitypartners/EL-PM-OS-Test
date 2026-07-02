@@ -12,7 +12,7 @@ The goal is not to tell engineers how to build — it's to give them the "why" s
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for stack context (issue tracker, code repo, technical context if known). Read the PRD or feature description provided.
+Read `memory/personal/${USER}.md` for stack context (issue tracker, code repo, technical context if known). Read the PRD or feature description provided.
 
 ## Step 2 — Engineering Brief Structure
 

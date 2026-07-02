@@ -1,91 +1,23 @@
-# PM Operating System — User Memory Profile
+# PM Operating System — User Memory Profile (deprecated)
 
-> This file is your persistent PM context. PM Operating System reads it at the start of every session and offers to update it at the end. The more complete this is, the less you have to re-brief Claude each session.
+> **This file is deprecated.** As of ADR-0001 (see `memory/decisions/adr-0001-adopt-team-shared-memory.md`), PM Operating System uses a three-layer memory model:
 >
-> To set this up, tell Claude "I want to set up PM Operating System" and it will walk you through the onboarding wizard.
+> - **Personal notes** → `memory/personal/${USER}.md` (gitignored, per-PM)
+> - **Team-shared state** → `memory/team/${CURRENT_TEAM}/*.yaml` (schema-validated, PR-reviewed)
+> - **Org-wide context** → `memory/org/*.md` (2-approval merges)
+> - **Durable decisions** → `memory/decisions/adr-NNNN-*.md` (immutable ADRs)
+>
+> See `memory/personal/README.md` for the personal-profile format and `memory/schemas/` for team YAML schemas.
 
-last_updated: <!-- fill in after setup -->
+## Migration
 
----
+If you were using the old single-file profile:
 
-## Product Context
+1. Create your personal file: `memory/personal/<your-username>.md` where `<your-username>` is the local-part of your git `user.email`. Follow the format in `memory/personal/README.md`.
+2. Anything that was team-relevant in your old profile (roadmap, personas, stakeholders, risks) belongs in `memory/team/${CURRENT_TEAM}/*.yaml`. Use `/promote-memory` to open a PR for each item.
+3. Anything that was a durable decision belongs in an ADR — use `/adr` to create one.
+4. Once migrated, this file is safe to delete (kept as a stub to avoid breaking any legacy skill that still references it during the coexistence period).
 
-product_name: <!-- e.g. Acme Analytics -->
-product_stage: <!-- idea / pre-launch / early / growth / scale -->
-core_user_problem: <!-- one sentence: who struggles with what, and why it matters -->
-business_model: <!-- SaaS / marketplace / usage-based / freemium / other -->
-current_bets:
-  - <!-- your biggest strategic bet right now -->
-  - <!-- second bet if applicable -->
-product_url: <!-- optional -->
+## For new PMs
 
----
-
-## Stack
-
-issue_tracker: <!-- Linear / Jira / Notion / GitHub Issues / other -->
-docs_tool: <!-- Notion / Confluence / Google Docs / other -->
-comms_tool: <!-- Slack / Teams / Discord / other -->
-analytics_tool: <!-- Amplitude / Mixpanel / Segment / GA4 / other -->
-design_tool: <!-- Figma / Sketch / other -->
-code_repo: <!-- github.com/org/repo -->
-
----
-
-## Working Style
-
-prd_format_preference: <!-- brief / detailed / bullet-heavy / narrative -->
-verbosity: <!-- concise / standard / thorough -->
-preferred_frameworks:
-  - <!-- e.g. JTBD -->
-  - <!-- e.g. Opportunity Solution Tree -->
-avoid:
-  - <!-- e.g. don't include AI system architecture unless I ask -->
-
----
-
-## Stakeholders
-
-<!-- Add one block per key stakeholder -->
-
-<!-- Example:
-- name: Sarah Chen
-  role: VP Engineering
-  comms_style: executive summary — wants decisions and blockers, not details
-  sensitivities: hates when engineering is looped in without full context
-  history: pushed back on the auth rewrite in Q1 — cite data when proposing infra changes
--->
-
----
-
-## Roadmap State
-
-now:
-  - <!-- item: [name], owner: [name], target: [date] -->
-
-next:
-  - <!-- item: [name], priority reason: [why] -->
-
-later:
-  - <!-- item: [name] -->
-
-decided_and_why:
-  - <!-- decision: [what was decided], rationale: [why], date: [date] -->
-
----
-
-## Open Questions
-
-<!-- Format: - [question] — flagged [date] — owner: [name or TBD] -->
-
----
-
-## Tracked Risks
-
-<!-- Format: - [risk] — flagged [date] — status: open / resolved — resolution: [if resolved] -->
-
----
-
-## Lessons Learned
-
-<!-- Format: - [initiative] — [lesson] — [date] -->
+Run `/onboarding` — the wizard now writes to `memory/personal/${USER}.md` directly and offers to promote team-relevant answers via `/promote-memory`.

@@ -12,7 +12,7 @@ Framework: Lenny's 14 PM habits (clarity above all), Pyramid Principle (organize
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for: roadmap state (Now/Next/Later), OKRs, stakeholders who receive the weekly update, and communication preferences. If Linear/Jira MCP is connected, pull current sprint state.
+Read `memory/personal/${USER}.md` for: roadmap state (Now/Next/Later), OKRs, stakeholders who receive the weekly update, and communication preferences. If Linear/Jira MCP is connected, pull current sprint state.
 
 ## Step 2 — Gather This Week's Content
 
@@ -68,4 +68,4 @@ After writing the digest:
 Produce the weekly digest using the template. Offer to:
 - Save to `outputs/weekly-[date].md`
 - Post to Slack (if MCP connected and channel is known from memory)
-- Update `memory/user-profile.md` with any new items surfaced during this session
+- Update `memory/personal/${USER}.md` with any new items surfaced during this session

@@ -14,7 +14,7 @@ Key principle: "Evals quietly decide whether your AI product thrives or dies. Th
 
 ## Step 1 — Load Context
 
-Read the error analysis output (from the error-analysis skill or user input) to understand which failure categories to target. Read `memory/user-profile.md` for the AI feature context.
+Read the error analysis output (from the error-analysis skill or user input) to understand which failure categories to target. Read `memory/personal/${USER}.md` for the AI feature context.
 
 ## Step 2 — Three Types of Evals
 

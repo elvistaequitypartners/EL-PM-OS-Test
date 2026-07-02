@@ -10,7 +10,7 @@ You are generating a precise, self-contained prompt to be pasted directly into v
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product context. Read the PRD, feature description, or user stories provided.
+Read `memory/personal/${USER}.md` for product context. Read the PRD, feature description, or user stories provided.
 
 ## Step 2 — Extract Required Information
 

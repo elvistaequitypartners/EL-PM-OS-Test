@@ -12,7 +12,7 @@ Key principle from Torres: "The OST is a simple visual but complex in practice. 
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for current bets and North Star context. Read `context/product/roadmap.md` for current OKRs. Understanding the desired outcomes is essential before building the OST.
+Read `memory/personal/${USER}.md` for current bets and North Star context. Read `context/product/roadmap.md` for current OKRs. Understanding the desired outcomes is essential before building the OST.
 
 ## Step 2 — Establish the Desired Outcome
 
@@ -93,4 +93,4 @@ Present the full OST as a structured tree (text-based, ready to paste into Notio
 - Prioritization recommendation with rationale
 - Next discovery step: which assumption to test first
 
-Offer to save the OST and opportunity prioritization to `memory/user-profile.md`.
+Offer to save the OST and opportunity prioritization to `memory/personal/${USER}.md`.

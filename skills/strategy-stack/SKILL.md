@@ -13,7 +13,7 @@ Frameworks: Shreyas Doshi (3 levels of product work), Michael Porter (competing 
 ## Step 1 — Load Context
 
 Read in full:
-- `memory/user-profile.md` — all fields
+- `memory/personal/${USER}.md` — all fields
 - `context/product/roadmap.md` — current OKRs and Now/Next/Later
 - `context/company/mission.md` — company stage and direction
 - `context/company/competitors.md` — if it exists

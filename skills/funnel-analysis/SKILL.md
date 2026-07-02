@@ -12,7 +12,7 @@ Framework: AARRR (Pirate Metrics — Acquisition, Activation, Retention, Revenue
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage and business model. Read `context/company/analytics-baseline.md` for existing conversion benchmarks.
+Read `memory/personal/${USER}.md` for product stage and business model. Read `context/company/analytics-baseline.md` for existing conversion benchmarks.
 
 ## Step 2 — Funnel Data Input
 

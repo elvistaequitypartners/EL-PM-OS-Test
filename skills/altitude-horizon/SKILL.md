@@ -14,7 +14,7 @@ Key insight: "The biggest growth opportunity for most PMs isn't doing the curren
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for the user's role and product stage. Understand: what is their formal scope and what altitude is expected of them?
+Read `memory/personal/${USER}.md` for the user's role and product stage. Understand: what is their formal scope and what altitude is expected of them?
 
 ## Step 2 — The Altitude Framework
 

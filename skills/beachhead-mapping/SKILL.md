@@ -14,7 +14,7 @@ Key principle: Own one niche completely before expanding. A 10x advantage in a s
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, business model, and current bets. Read `context/product/personas.md` for existing persona definitions. Understand: are they pre-PMF (finding the market) or post-PMF (expanding)?
+Read `memory/personal/${USER}.md` for product stage, business model, and current bets. Read `context/product/personas.md` for existing persona definitions. Understand: are they pre-PMF (finding the market) or post-PMF (expanding)?
 
 ## Step 2 — Identify Candidate Segments
 

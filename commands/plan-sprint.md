@@ -19,7 +19,7 @@ If `$ARGUMENTS` is empty, plan the next sprint. If a sprint name/number is given
 ## Step 1 — Load Memory & Context
 
 Read in parallel:
-- `memory/user-profile.md` — team size, sprint cadence, current OKRs, roadmap state
+- `memory/personal/${USER}.md` — team size, sprint cadence, current OKRs, roadmap state
 - `context/product/roadmap.md` (fallback: `context/product/roadmap-template.md`)
 
 If Linear or Jira MCP is connected, pull:
@@ -29,7 +29,7 @@ If Linear or Jira MCP is connected, pull:
 
 ### No-Context Fallback
 
-If `memory/user-profile.md` doesn't exist or lacks team/sprint data, and no tracker is connected, ask:
+If `memory/personal/${USER}.md` doesn't exist or lacks team/sprint data, and no tracker is connected, ask:
 
 1. "What items are you considering for this sprint? (list them, rough is fine)"
 2. "How many engineers do you have and how long is your sprint?"
@@ -151,7 +151,7 @@ Compile the final sprint plan:
 
 Offer to:
 - Save the sprint plan to `outputs/sprint-plan-[sprint-name]-[date].md`
-- Update `memory/user-profile.md` with:
+- Update `memory/personal/${USER}.md` with:
   - Current sprint state (→ `roadmap_state`)
   - Decisions made (→ `decided_and_why`)
   - Risks (→ `tracked_risks`)

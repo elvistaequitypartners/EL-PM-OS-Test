@@ -14,7 +14,7 @@ Key principle: As a Founding PM, your job is not to implement PM best practices.
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for company stage (pre-PMF vs. post-PMF), team size, CEO relationship, and current product state.
+Read `memory/personal/${USER}.md` for company stage (pre-PMF vs. post-PMF), team size, CEO relationship, and current product state.
 
 ## Step 2 — The Founding PM Context
 

@@ -12,7 +12,7 @@ Framework: Alberto Savoia (Pretotype Testing), Teresa Torres (continuous discove
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` and `context/product/roadmap.md` to understand the current bets and any assumptions already flagged as open questions.
+Read `memory/personal/${USER}.md` and `context/product/roadmap.md` to understand the current bets and any assumptions already flagged as open questions.
 
 ## Step 2 — Extract Assumptions
 
@@ -76,4 +76,4 @@ Present:
 3. Cheap test designs for the top 3 P1 assumptions
 4. Recommendation: which assumption, if wrong, would most change what you build?
 
-Offer to add P1 assumptions to `memory/user-profile.md` as tracked open questions.
+Offer to add P1 assumptions to `memory/personal/${USER}.md` as tracked open questions.

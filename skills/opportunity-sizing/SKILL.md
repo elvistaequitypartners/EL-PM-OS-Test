@@ -12,7 +12,7 @@ Framework: Lenny Rachitsky's opportunity sizing model, OST opportunity scoring, 
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for product stage, user base size, and current metrics. Read `context/company/analytics-baseline.md` for baseline metrics to anchor estimates. Read `context/product/roadmap.md` for prioritization context.
+Read `memory/personal/${USER}.md` for product stage, user base size, and current metrics. Read `context/company/analytics-baseline.md` for baseline metrics to anchor estimates. Read `context/product/roadmap.md` for prioritization context.
 
 ## Step 2 — Define the Opportunity Precisely
 

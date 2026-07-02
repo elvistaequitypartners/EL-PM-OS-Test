@@ -12,7 +12,7 @@ Framework: Shape Up (appetite-based scoping), Lenny's PRD guide (just enough dir
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for team size, current roadmap state, and any existing epics or initiatives in the Now/Next list. Read `context/product/roadmap.md` for OKR context.
+Read `memory/personal/${USER}.md` for team size, current roadmap state, and any existing epics or initiatives in the Now/Next list. Read `context/product/roadmap.md` for OKR context.
 
 ## Step 2 — Understand the Initiative
 

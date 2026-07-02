@@ -12,7 +12,7 @@ Frameworks: Marty Cagan (outcomes not output), Shreyas Doshi (strategy vs. execu
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` for current bets, North Star, and roadmap state. Read `context/product/roadmap.md` for current objectives. Read `context/company/mission.md` for company-level direction.
+Read `memory/personal/${USER}.md` for current bets, North Star, and roadmap state. Read `context/product/roadmap.md` for current objectives. Read `context/company/mission.md` for company-level direction.
 
 ## Step 2 — OKR Quality Criteria
 

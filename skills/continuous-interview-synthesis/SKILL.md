@@ -12,7 +12,7 @@ Key principle from Torres: "The most common interview mistake is asking users wh
 
 ## Step 1 — Load Context
 
-Read `memory/user-profile.md` and `context/product/personas.md`. Understand: what desired outcome is this discovery work in service of? What OST opportunities already exist?
+Read `memory/personal/${USER}.md` and `context/product/personas.md`. Understand: what desired outcome is this discovery work in service of? What OST opportunities already exist?
 
 ## Step 2 — Assess the Interview Data
 
@@ -85,4 +85,4 @@ Produce a structured synthesis:
 - Recommended next interviews (who to talk to and what to ask)
 - Top assumption to test before building
 
-Offer to save findings to `memory/user-profile.md` and update the persona file with new insights.
+Offer to save findings to `memory/personal/${USER}.md` and update the persona file with new insights.
